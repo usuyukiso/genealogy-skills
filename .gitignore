@@ -1,0 +1,24 @@
+# genealogy-skills: everything in this folder is ignored, except my own skills.
+# A new skill is published only after adding its folder below.
+/*
+
+!/.gitignore
+!/README.md
+!/README.ru.md
+!/README.uk.md
+!/README.de.md
+!/LICENSE
+
+!/archidocs-form/
+!/archive-scan-search/
+!/chronology-table/
+!/genealogy-biography/
+!/metric-book-index/
+!/scans-to-people-all/
+
+# not mine (own repo): ex-ussr-kinship-research — stays ignored by /*
+
+# junk inside the skills
+.DS_Store
+__pycache__/
+*.pyc
