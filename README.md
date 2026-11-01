@@ -14,7 +14,7 @@ Each skill is a folder with a `SKILL.md` (instructions for the agent), helper sc
 |---|---|---|
 | [archive-scan-search](archive-scan-search/README.md) | Searches a large folder of archive scans (thousands of frames, many delos): OCR of every frame, frame → delo by the microfilm cards, search by word fragments, checking every hit on the scan, an index of places | «Поищи деревню Глазки в делах Крестьянского банка по Ржевскому уезду» |
 | [metric-book-index](metric-book-index/README.md) | Reads a whole metric book frame by frame and builds an internal index of every birth, marriage and death, with ★ for the people searched for; can be resumed | «Дочитай метрики Дрогачева за 1892 год» |
-| [scans-to-people-all](scans-to-people-all/README.md) | Transcribes a confession list or register into `people_all.xlsx` (sheet `people_all2`), one row per person, in the document's spelling; doubtful readings marked yellow; then stops for your check | «Внеси сканы 078–081 в people_all» |
+| [scans-to-people-all](scans-to-people-all/README.md) | Transcribes a confession list or register into `people_all.xlsx` (sheet `people_all`), one row per person, in the document's spelling; doubtful readings marked yellow; then stops for your check | «Внеси сканы 078–081 в people_all» |
 | [archidocs-form](archidocs-form/README.md) | Builds the Archidocs upload form from the rows you have checked, with modern names and patronymics; keeps earlier parts in sync with your later corrections | «Сделай форму Archidocs для части 4» |
 | [chronology-table](chronology-table/README.md) | Reads a chronology spreadsheet (one life event per row, `.ods/.xlsx/.csv`) into a clean list of facts with sources, comments and links | used by genealogy-biography; or «Проверь таблицу по Лапиной» |
 | [genealogy-biography](genealogy-biography/README.md) | Writes a person page of the website: the life story with verbatim quotes, one page per source document, the name index, links to places; builds the site to check links | «Напиши биографию Якова Писарева» |
@@ -26,7 +26,7 @@ Each skill is a folder with a `SKILL.md` (instructions for the agent), helper sc
  ─────────────                   ────────                         ───────
  archive-scan-search ─┐
    (big scan folders) │          scans-to-people-all
- metric-book-index  ──┼── finds ──►  (people_all2)                chronology-table
+ metric-book-index  ──┼── finds ──►  (people_all)                 chronology-table
    (a parish book)    │               │                                │
                       │          you check the rows                    ▼
                       │               ▼                          genealogy-biography

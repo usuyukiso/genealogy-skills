@@ -1,8 +1,10 @@
-"""Build an Archidocs form from verified rows of people_all.xlsx / people_all2, modernizing names.
+"""Build an Archidocs form from verified rows of people_all.xlsx (sheet «people_all»), modernizing names.
 
 Usage: python3 people_all_to_form.py people_all.xlsx TEMPLATE_FORM.xlsx OUT.xlsx scan_file_1.jpg [scan_file_2.jpg …]
-Rows are taken from people_all2 whose FileName is one of the given scan files, in sheet order.
-people_all keeps the document spelling; only the form gets modern names (modern_names.py).
+Rows are taken from sheet «people_all» (the confession-list sheet; called «people_all2» before
+2026-11-01) whose FileName is one of the given scan files, in sheet order. Columns are found
+by their headers in row 2. people_all keeps the document spelling; only the form gets modern
+names (modern_names.py).
 """
 import copy
 import os
@@ -38,9 +40,11 @@ def leaf(page):
     return f'лист {p[:-2]} об.' if p.endswith('об') else f'лист {p}'
 
 
-src = openpyxl.load_workbook(SRC)['people_all2']
+src = openpyxl.load_workbook(SRC)['people_all']
 head = [c.value for c in src[2]]
-fcol = head.index('FileName')
+H = {h: head.index(h) for h in ('Год', 'нас.пункт', 'Page', 'additional info', 'фамилия', 'Имя',
+                                 'Отчество', 'age', 'FileName')}
+fcol = H['FileName']
 rows = [r for r in src.iter_rows(min_row=3, values_only=True) if r[fcol] in FILES]
 
 wb = openpyxl.load_workbook(TEMPLATE)
@@ -50,7 +54,8 @@ height = ws.row_dimensions[2].height
 ws.delete_rows(2, ws.max_row)
 unknown = set()
 for i, r in enumerate(rows, start=2):
-    year, place, page, info, sur, name, patr, age = r[0], r[4], r[5], r[12], r[13], r[14], r[15], r[16]
+    year, place, page, info, sur, name, patr, age = (r[H[h]] for h in (
+        'Год', 'нас.пункт', 'Page', 'additional info', 'фамилия', 'Имя', 'Отчество', 'age'))
     new_p, ok = modern_patronymic(patr)
     if not ok:
         unknown.add(patr)

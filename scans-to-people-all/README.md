@@ -4,7 +4,7 @@ Languages: [English](README.md) / [Русский](README.ru.md) / [Україн
 
 Part of the [genealogy-skills](../README.md) set.
 
-Copies a confession list (or a metric book, or a similar parish register) from the scans into the spreadsheet `sources/people_all.xlsx`, sheet `people_all2` — one row per person, **exactly as written in the document** (Татиана, Иоанн, отчество «Петров»). Then it stops and waits for you to check the rows.
+Copies a confession list (or a metric book, or a similar parish register) from the scans into the spreadsheet `sources/people_all.xlsx`, sheet `people_all` — one row per person, **exactly as written in the document** (Татиана, Иоанн, отчество «Петров»). Then it stops and waits for you to check the rows.
 
 ## How to start
 
@@ -18,7 +18,7 @@ Or start it directly: `/scans-to-people-all <scans>`.
 
 ## What you get
 
-- New rows in `people_all2`: surname, name, patronymic, age, year of birth, household (двор) number, the clerk's running numbers, relation («жена», «дети их»), page and scan file name.
+- New rows in `people_all`: surname, name, patronymic, age, year of birth, household (двор) number, the clerk's running numbers, relation («жена», «дети их»), page and scan file name.
 - Words that are hard to read are **filled yellow** with a note «читается неуверенно (А / Б)» — you check them against the scan and remove the fill.
 - Surnames or patronymics that are not written in the document are in italics.
 - A short report: how many people on each leaf, how many doubtful readings.

@@ -1,19 +1,29 @@
 ---
 name: scans-to-people-all
-description: Transcribe scans of a confession list (исповедная роспись), metric book or similar parish register into sources/people_all.xlsx (sheet people_all2) — one row per person, in the document spelling, with household numbers, per-sex running numbers, ages, relations and yellow-marked doubtful readings — then stop for the user's check. Use whenever the user asks to digitize / оцифровать / внести в табличку / в people_all from scans like sources/_vinnik/1900_ispoved_Stanichne_DAHO_40-110-914_*/…_scanNNN_pageNNN.jpg. The next step, the Archidocs upload form from the checked rows, is the archidocs-form skill. Not for reading a metric book through for research with an internal frame-by-frame index — that is metric-book-index.
+description: Transcribe scans of a confession list (исповедная роспись), metric book or similar parish register into sources/people_all.xlsx (sheet «people_all») — one row per person, in the document spelling, with household numbers, per-sex running numbers, ages, relations and yellow-marked doubtful readings — then stop for the user's check. Use whenever the user asks to digitize / оцифровать / внести в табличку / в people_all from scans like sources/_vinnik/1900_ispoved_Stanichne_DAHO_40-110-914_*/…_scanNNN_pageNNN.jpg. The next step, the Archidocs upload form from the checked rows, is the archidocs-form skill. Not for reading a metric book through for research with an internal frame-by-frame index — that is metric-book-index.
 ---
 
 # Scans → people_all
 
 **Order of work (user's rule, 2026-10-28):**
 1. Transcribe scans in the **document spelling** (Татиана, Иоанн, отчество «Петров/Петрова»).
-2. Append them to `sources/people_all.xlsx`, sheet `people_all2` (§5). people_all stays **as in the original** — never modernize there.
+2. Append them to `sources/people_all.xlsx`, sheet `people_all` (§5). people_all stays **as in the original** — never modernize there.
 3. The user verifies/corrects the rows in people_all. **This skill ends here.**
 4. Only then, as a separate step, the **archidocs-form** skill builds the Archidocs form from
-   people_all2 with modernized names (Татьяна, Иван, отчество «Петрович/Петровна»).
+   people_all with modernized names (Татьяна, Иван, отчество «Петрович/Петровна»).
+
+**Sheets of `sources/people_all.xlsx`** (renamed by the user 2026-11-01):
+- `people_all` — the working sheet for confession-list data, the one this skill writes to (was
+  «people_all2»). Row 1 = the user's group notes («Данные со сканов», «Отчество или фамилия
+  курсивом — добавлено мной (не было в оригинальном документе)», «1 — внес в дерево эту
+  запись»), row 2 = column headers, data from row 3.
+- `people_all_orig` — the user's older master sheet (was «people_all»); read it for context
+  (e.g. how a family's род was grouped), never write to it.
+- Always find columns **by their header in row 2**, never by letter: the user changes the
+  layout (2026-11-01 he removed «Filter for comparison», and every column after it moved).
 
 ## 1. Find the previous batch and learn from it
-- Read the last rows of `people_all2` (and the newest `archidocs_ready_to_send_part.N/` form):
+- Read the last rows of sheet `people_all` (and the newest `archidocs_ready_to_send_part.N/` form):
   they show which family continues onto the first new scan, the current village section, the leaf,
   and the user's corrections — their spelling choices are the standard (Розова for the whole family,
   Брижань vs Брижанев as written).
@@ -54,8 +64,8 @@ description: Transcribe scans of a confession list (исповедная рос�
 - Doubts go in the comment, never silently, always with the variants you see and only with the word
   «неуверенно» (never «неразборчиво»): «фамилия читается неуверенно (А / Б)», «имя читается
   неуверенно (А / Б)», «возраст читается неуверенно (73 / 74)» — every doubt, even a small one.
-  In people_all2 also fill the doubtful cell(s) **yellow** (FFFFFF00, as the user does): surname →
-  род + фамилия (L, N), name → O, patronymic → P, age → Q. The user checks against the scan and,
+  In people_all also fill the doubtful cell(s) **yellow** (FFFFFF00, as the user does): surname →
+  «род» + «фамилия», name → «Имя», patronymic → «Отчество», age → «age». The user checks against the scan and,
   if he reads it, removes the fill and the «неуверенно» note; what stays later goes to Archidocs
   as text. Implausible ages (parent < 16 at birth etc.) — keep the
   documented age and note it. Never invent kinship the document doesn't state.
@@ -64,11 +74,12 @@ description: Transcribe scans of a confession list (исповедная рос�
   the document writes it (as the user does: the number stands where the clerk put it, even a row above
   the household head — always so, don't mention it in the report) → people_all
   «Family # / Двор №». Not in Archidocs.
-- **Italic = not written in the document** (people_all row 1: «Отчество курсивом — добавлено мной»):
+- **Italic = not written in the document** (people_all row 1: «Отчество или фамилия курсивом —
+  добавлено мной (не было в оригинальном документе)»):
   10th element `"S"` if this person's surname is not written next to them (household members under
   the head), `"P"` if the patronymic is ours (children «Дети их: Анна» → Петрова), `"SP"` both.
   Wives' «Ирина Даниилова дочь» is written → no P. people_all gets italic фамилия / Отчество.
-- **Numbering (always; parts 1–3 already done in people_all2):** record each person's number from «мужеска/женска пола» as the
+- **Numbering (always; parts 1–3 already done in people_all):** record each person's number from «мужеска/женска пола» as the
   8th element of the row, `"M1751"` / `"F1729"`; it goes to people_all columns Муж / жен (not to
   Archidocs — that's why people_all is the source of truth). The clerk often writes the number a
   row off — assign by the running sequence per sex, and check the first/last number of each page
@@ -81,14 +92,17 @@ Write a `rows.json` in the scratchpad (format in the script docstring) and run
 `python3 .claude/skills/scans-to-people-all/scripts/build_form.py rows.json SCRATCH/raw_part.N.xlsx`
 (plain `python3`, not `-I` — openpyxl is in user site-packages). This is only an intermediate file.
 
-## 5. Append to sources/people_all.xlsx → people_all2 (document spelling)
-Sheet `people_all2` = the columns of `people_all`, one row per person: Год 1900, DocType Confession_book,
+## 5. Append to sources/people_all.xlsx → sheet people_all (document spelling)
+Sheet `people_all`, one row per person (columns by their headers in row 2): Год 1900, DocType Confession_book,
 detailed/фонд as in the existing 1900 Винники rows, нас.пункт Винники / Брижанев / Лычев / Пивнев,
 Page `228` or `'227об'`, Сословие военный (part.1) / крестьянин (part.2+; check the section heading),
 род = masculine surname (Винникова → Винник as the user grouped it, -кая → -кий, -ова/-ева/-ина → без «а»),
 additional info = comment without the age, фамилия/Имя/Отчество, age (int, or "5 недель"),
-BirthYearCalculated `=A-Q`, FileName (col Z) = scan file name. Муж/жен numbers are not in the forms — left empty.
-The file must be closed in LibreOffice (no `.~lock.people_all.xlsx#`); back it up first.
+BirthYearCalculated `=A<row>-<age column><row>` (the script picks the letter of «age»), FileName =
+scan file name. Муж/жен numbers are not in the Archidocs forms. New rows get the style of the
+sheet's last row (blue «Год», italics only where flagged; a yellow doubt fill is not copied).
+The file must be closed in LibreOffice (no `.~lock.people_all.xlsx#`); back it up first
+(`sources/backup/_backup_people_all_<date>.xlsx`).
 `python3 .claude/skills/scans-to-people-all/scripts/to_people_all.py SRC OUT --estate=крестьянин raw_part.N.xlsx` appends rows that aren't in the
 sheet yet (never rebuilds an existing sheet — the user edits it). Set --estate from the section heading
 («…крестьяне» / «…военные»); split the raw form if a batch spans both.
@@ -97,6 +111,6 @@ form in the same step; after the check the user asks for it (archidocs-form skil
 
 ## 6. Report
 Tell the user: number of people per leaf and where the rows went. Uncertain readings are not listed
-in chat — they are in people_all2 itself (yellow fill + «… читается неуверенно (А / Б)» in
+in chat — they are in sheet people_all itself (yellow fill + «… читается неуверенно (А / Б)» in
 additional info); just give their count. Do mention clerk anomalies kept as written (e.g. «третьего
 брака» husband with «жена 2 брака») — in the chat only, no note in the sheet.

@@ -4,7 +4,7 @@ Sprachen: [English](README.md) / [Русский](README.ru.md) / [Україн�
 
 Teil der Sammlung [genealogy-skills](../README.de.md).
 
-Überträgt eine Beichtliste (oder ein Kirchenbuch oder ein ähnliches kirchliches Register) von den Scans in die Tabelle `sources/people_all.xlsx`, Blatt `people_all2` — eine Zeile pro Person, **genau wie im Dokument geschrieben** (Татиана, Иоанн, Vatersname «Петров»). Danach hält er an und wartet, bis Sie die Zeilen geprüft haben.
+Überträgt eine Beichtliste (oder ein Kirchenbuch oder ein ähnliches kirchliches Register) von den Scans in die Tabelle `sources/people_all.xlsx`, Blatt `people_all` — eine Zeile pro Person, **genau wie im Dokument geschrieben** (Татиана, Иоанн, Vatersname «Петров»). Danach hält er an und wartet, bis Sie die Zeilen geprüft haben.
 
 ## Wie starten
 
@@ -18,7 +18,7 @@ Oder direkt starten: `/scans-to-people-all <Scans>`.
 
 ## Was Sie bekommen
 
-- Neue Zeilen in `people_all2`: Nachname, Vorname, Vatersname, Alter, Geburtsjahr, Hofnummer, die laufenden Nummern des Schreibers nach Geschlecht, Verwandtschaft («жена», «дети их»), Blatt und Dateiname des Scans.
+- Neue Zeilen in `people_all`: Nachname, Vorname, Vatersname, Alter, Geburtsjahr, Hofnummer, die laufenden Nummern des Schreibers nach Geschlecht, Verwandtschaft («жена», «дети их»), Blatt und Dateiname des Scans.
 - Schwer lesbare Wörter sind **gelb hinterlegt** mit dem Vermerk «читается неуверенно (А / Б)» („unsicher gelesen“) — Sie prüfen sie am Scan und entfernen die Markierung.
 - Nach- oder Vatersnamen, die im Dokument selbst nicht stehen, sind kursiv.
 - Ein kurzer Bericht: wie viele Personen pro Blatt, wie viele unsichere Lesungen.

@@ -1,33 +1,71 @@
-"""Append rows of raw (document-spelling) forms to people_all.xlsx → sheet people_all2.
+"""Append rows of raw (document-spelling) forms to sources/people_all.xlsx → sheet «people_all».
 
 Usage: python3 to_people_all.py SRC OUT [--estate=крестьянин|военный] raw_form.xlsx …
 Without --estate: военный for paths containing "part.1", else крестьянин (the 1900 batches).
+
+Sheets of people_all.xlsx (renamed by the user 2026-11-01):
+  people_all      — the working sheet for confession-list data (was «people_all2»); rows go here;
+  people_all_orig — the user's older master sheet (was «people_all»); read-only here.
+Columns are found by their headers in row 2 (not by letter), so adding or removing a column
+in the sheet does not break the script. Rows already in the sheet (same surname, name,
+patronymic, page, file) are skipped: the sheet is never rebuilt — the user edits it.
 """
-import copy, re, sys, openpyxl
+import copy
+import re
+import sys
+
+import openpyxl
+from openpyxl.styles import PatternFill
+from openpyxl.utils import get_column_letter
 
 args = [a for a in sys.argv[1:] if not a.startswith('--estate=')]
 ESTATE = next((a.split('=', 1)[1] for a in sys.argv[1:] if a.startswith('--estate=')), None)
 SRC, OUT, *FORMS = args
-SHEET = 'people_all2'
+SHEET = 'people_all'
+ORIG = 'people_all_orig'
 DETAILED = 'Сповідний розпис Предтечінської церкви села Станичного Валківського повіту Харьківської губ'
 FOD = 'Ф-40, оп.-110, спр.-914, арк. 191-270'
-VILLAGE = {'Хутор Винников': 'Винники', 'Хутор Брижанев': 'Брижанев', 'Хутор Лычев': 'Лычев', 'Хутор Пивнев': 'Пивнев'}
+VILLAGE = {'Хутор Винников': 'Винники', 'Хутор Брижанев': 'Брижанев', 'Хутор Лычев': 'Лычев',
+           'Хутор Пивнев': 'Пивнев', 'Хутор Ляшев': 'Ляшев'}
+
+
+def columns(ws):
+    """header (row 2) → column number (1-based)"""
+    return {c.value: c.column for c in ws[2] if c.value}
+
 
 wb = openpyxl.load_workbook(SRC)
-base = wb['people_all']
-# род: the user's own surname→род pairs from people_all first
+if SHEET not in wb.sheetnames:
+    sys.exit(f'no sheet «{SHEET}» in {SRC} (sheets: {wb.sheetnames})')
+ws = wb[SHEET]
+col = columns(ws)
+need = ['Год', 'DocType', 'detailed', 'фонд-опись-дело', 'нас.пункт', 'Page', 'Family # / Двор №',
+        'Муж', 'жен', 'Сословие', 'род', 'additional info', 'фамилия', 'Имя', 'Отчество', 'age',
+        'BirthYearCalculated', 'FileName']
+missing = [h for h in need if h not in col]
+if missing:
+    sys.exit(f'headers not found in row 2 of «{SHEET}»: {missing}')
+LAST = ws.max_column
+
+# род: the user's own surname→род pairs (feminine form → family name), from both sheets
 user_rod = {}
-for r in base.iter_rows(min_row=3, values_only=True):
-    # only feminine forms of the same surname (not maiden names of wives)
-    if (r[0] == 1900 and r[4] == 'Винники' and r[11] and r[13] and r[11] != r[13]
-            and r[13].startswith(r[11][:4])):
-        user_rod[r[13]] = r[11]
+for name in (ORIG, SHEET):
+    if name not in wb.sheetnames:
+        continue
+    s = wb[name]
+    c = columns(s)
+    if not all(h in c for h in ('Год', 'нас.пункт', 'род', 'фамилия')):
+        continue
+    for r in s.iter_rows(min_row=3, values_only=True):
+        year, place, rd, sur = (r[c['Год'] - 1], r[c['нас.пункт'] - 1], r[c['род'] - 1], r[c['фамилия'] - 1])
+        if year == 1900 and rd and sur and rd != sur and sur.startswith(rd[:4]):
+            user_rod[sur] = rd
 
 rows = []  # (form_row, estate)
 for path in FORMS:
-    ws = openpyxl.load_workbook(path).active
+    f = openpyxl.load_workbook(path).active
     estate = ESTATE or ('военный' if 'part.1' in path else 'крестьянин')
-    rows += [(r, estate) for r in ws.iter_rows(min_row=2, values_only=True) if any(r)]
+    rows += [(r, estate) for r in f.iter_rows(min_row=2, values_only=True) if any(r)]
 
 male_surnames = {r[0] for r, _ in rows if r[2] and not r[2].endswith('а')}
 
@@ -61,32 +99,22 @@ def split_age(comment):
     return comment, None
 
 
-FILECOL = 26  # Z: FileName (added by the user to people_all2)
-if SHEET in wb.sheetnames and wb[SHEET].max_row > 2:
-    # sheet already has data (and maybe the user's edits) — append, never rebuild
-    ws = wb[SHEET]
-    have = {(r[13], r[14], r[15], str(r[5]), r[FILECOL - 1])
-            for r in ws.iter_rows(min_row=3, values_only=True)}
-    rows = [(r, e) for r, e in rows
-            if (r[0], r[1], r[2], str(page(r[8].split('914, ')[1])), r[9]) not in have]
-    start = ws.max_row + 1
-else:
-    if SHEET in wb.sheetnames:
-        del wb[SHEET]
-    ws = wb.create_sheet(SHEET, index=1)
-    for key, dim in base.column_dimensions.items():
-        ws.column_dimensions[key].width = dim.width
-        ws.column_dimensions[key].hidden = dim.hidden
-    for rn in (1, 2):
-        ws.row_dimensions[rn].height = base.row_dimensions[rn].height
-        for c in base[rn]:
-            n = ws.cell(row=rn, column=c.column, value=c.value)
-            n._style = copy.copy(c._style)
-            if c.comment:
-                n.comment = copy.copy(c.comment)
-    ws.cell(row=2, column=FILECOL, value='FileName')._style = copy.copy(base.cell(row=2, column=1)._style)
-    start = 3
-body_style = {c.column: copy.copy(c._style) for c in base[1856]}  # a 1900 Винники row
+def v(r, h):
+    return r[col[h] - 1]
+
+
+have = {(v(r, 'фамилия'), v(r, 'Имя'), v(r, 'Отчество'), str(v(r, 'Page')), v(r, 'FileName'))
+        for r in ws.iter_rows(min_row=3, values_only=True)}
+rows = [(r, e) for r, e in rows
+        if (r[0], r[1], r[2], str(page(r[8].split('914, ')[1])), r[9]) not in have]
+
+# style of new rows: copied from the last data row of the sheet (the user's own formatting)
+last = ws.max_row
+while last > 2 and not any(c.value for c in ws[last]):
+    last -= 1
+body_style = {c.column: copy.copy(c._style) for c in ws[last]}
+start = last + 1
+age_letter = get_column_letter(col['age'])
 
 for i, (r, estate) in enumerate(rows, start=start):
     sur, name, pat, _by, _t, _y, place, _d, arch, fname, comment = r[:11]
@@ -95,26 +123,29 @@ for i, (r, estate) in enumerate(rows, start=start):
     flags = (r[13] if len(r) > 13 else None) or ''  # S / P → italic фамилия / Отчество
     info, age = split_age(comment or '')
     leaf = arch.split('914, ')[1]
-    vals = {1: 1900, 2: 'Confession_book', 3: DETAILED, 4: FOD, 5: VILLAGE[place.split(',')[0]],
-            6: page(leaf), 11: estate, 12: rod(sur), 13: info or None, 14: sur, 15: name, 16: pat,
-            17: age, FILECOL: fname}
-    vals[18] = f'=A{i}-Q{i}' if isinstance(age, int) else (f'=A{i}' if age else None)
+    vals = {'Год': 1900, 'DocType': 'Confession_book', 'detailed': DETAILED, 'фонд-опись-дело': FOD,
+            'нас.пункт': VILLAGE[place.split(',')[0]], 'Page': page(leaf), 'Сословие': estate,
+            'род': rod(sur), 'additional info': info or None, 'фамилия': sur, 'Имя': name,
+            'Отчество': pat, 'age': age, 'FileName': fname}
+    vals['BirthYearCalculated'] = (f'=A{i}-{age_letter}{i}' if isinstance(age, int)
+                                   else (f'=A{i}' if age else None))
     if num:
-        vals[9 if num[0] == 'M' else 10] = int(num[1:])
+        vals['Муж' if num[0] == 'M' else 'жен'] = int(num[1:])
     if dvor:
-        vals[8] = dvor
-    italic = {14} if 'S' in flags else set()
-    if 'P' in flags:
-        italic.add(16)
-    for col in range(1, FILECOL + 1):
-        c = ws.cell(row=i, column=col, value=vals.get(col))
-        c._style = copy.copy(body_style.get(col, body_style[15]))
-        if col in italic:
-            f = copy.copy(c.font)
-            f.i = True
-            c.font = f
+        vals['Family # / Двор №'] = dvor
+    italic = ({col['фамилия']} if 'S' in flags else set()) | ({col['Отчество']} if 'P' in flags else set())
+    by_col = {col[h]: x for h, x in vals.items()}
+    for cn in range(1, LAST + 1):
+        c = ws.cell(row=i, column=cn, value=by_col.get(cn))
+        c._style = copy.copy(body_style.get(cn, body_style[col['Имя']]))
+        if c.fill.fill_type and c.fill.fgColor.rgb == 'FFFFFF00':  # a doubt mark of the style row
+            c.fill = PatternFill(fill_type=None)
+        f = copy.copy(c.font)
+        f.i = cn in italic
+        c.font = f
+
 ws.freeze_panes = 'A3'
-ws.auto_filter.ref = f'A2:{openpyxl.utils.get_column_letter(FILECOL)}{ws.max_row}'
+ws.auto_filter.ref = f'A2:{get_column_letter(LAST)}{ws.max_row}'
 wb.save(OUT)
-print(len(rows), 'rows ->', OUT, '| rod map:',
+print(len(rows), 'rows ->', OUT, f'(sheet «{SHEET}», rows {start}–{start + len(rows) - 1})', '| rod map:',
       sorted({(r[0], rod(r[0])) for r, _ in rows if rod(r[0]) != r[0]}))

@@ -14,7 +14,7 @@ Jeder Skill ist ein Ordner mit einer `SKILL.md` (Anweisungen für den Agenten), 
 |---|---|---|
 | [archive-scan-search](archive-scan-search/README.de.md) | Durchsucht einen großen Ordner mit Archivscans (Tausende Aufnahmen, viele Akten): Texterkennung jeder Aufnahme, Zuordnung Aufnahme → Akte anhand der Mikrofilmkarten, Suche nach Wortteilen, Prüfung jedes Treffers am Scan, Ortsregister | «Поищи деревню Глазки в делах Крестьянского банка по Ржевскому уезду» |
 | [metric-book-index](metric-book-index/README.de.md) | Liest ein ganzes Kirchenbuch Aufnahme für Aufnahme und erstellt ein internes Register aller Geburten, Ehen und Todesfälle, mit ★ bei den gesuchten Personen; lässt sich fortsetzen | «Дочитай метрики Дрогачева за 1892 год» |
-| [scans-to-people-all](scans-to-people-all/README.de.md) | Überträgt eine Beichtliste oder ein Register in `people_all.xlsx` (Blatt `people_all2`), eine Zeile pro Person, in der Schreibweise des Dokuments; Zweifelhaftes gelb markiert; hält dann für Ihre Prüfung an | «Внеси сканы 078–081 в people_all» |
+| [scans-to-people-all](scans-to-people-all/README.de.md) | Überträgt eine Beichtliste oder ein Register in `people_all.xlsx` (Blatt `people_all`), eine Zeile pro Person, in der Schreibweise des Dokuments; Zweifelhaftes gelb markiert; hält dann für Ihre Prüfung an | «Внеси сканы 078–081 в people_all» |
 | [archidocs-form](archidocs-form/README.de.md) | Erstellt das Archidocs-Upload-Formular aus den von Ihnen geprüften Zeilen, mit modernen Vor- und Vatersnamen; gleicht frühere Teile mit Ihren späteren Korrekturen ab | «Сделай форму Archidocs для части 4» |
 | [chronology-table](chronology-table/README.de.md) | Liest eine chronologische Tabelle (eine Zeile pro Lebensereignis, `.ods/.xlsx/.csv`) zu einer bereinigten Faktenliste mit Quellen, Kommentaren und Links | wird von genealogy-biography genutzt; oder «Проверь таблицу по Лапиной» |
 | [genealogy-biography](genealogy-biography/README.de.md) | Schreibt die Personenseite der Website: Lebensgeschichte mit wörtlichen Zitaten, eine Seite pro Quelle, Namensregister, Verknüpfung mit Orten; baut die Website und prüft die Links | «Напиши биографию Якова Писарева» |
@@ -26,7 +26,7 @@ Jeder Skill ist ein Ordner mit einer `SKILL.md` (Anweisungen für den Agenten), 
  ───────────────                 ──────────────                   ───────────────
  archive-scan-search ─┐
    (große Scan-       │          scans-to-people-all
-    Ordner)           │            (people_all2)                  chronology-table
+    Ordner)           │            (people_all)                   chronology-table
  metric-book-index  ──┤               │                                │
    (ein Kirchen-      │          Sie prüfen die Zeilen                 ▼
     buch)             │               ▼                          genealogy-biography
