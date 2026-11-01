@@ -53,6 +53,13 @@ The user edits people_all after a form is made. Before building a new part, rebu
 previous part into the scratchpad with `people_all_to_form.py` and diff it with the saved
 form; if anything changed, back up the old form and replace it. Say which parts changed.
 
+**Parts already uploaded to Archidocs are frozen** — never overwrite their form. If people_all
+changed for such a part, only list the differences (row, person, old → new) so the user can fix
+them on Archidocs by hand. Uploaded so far (update this list when the user says so):
+- part 1 (scans 014–017) — uploaded by 2026-11-01. Known differences then: Томенко Терентий
+  (note «в документе номер стоит в графе женского пола (305)» added) and Рудич Дмитрий («,» →
+  «;» before the age).
+
 ## 4. Report
 
 Tell the user: which part, which scans, how many people; the list of name changes made by
