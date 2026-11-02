@@ -359,6 +359,14 @@ accessed: "<today, YYYY-MM-DD>"
   fields) are tables too, one entry per row — never consecutive `> ` lines, which
   Markdown merges into one paragraph. Group them under `###` headings (e.g. one per
   household: «### Двор 8 (л. 206)»); headings not taken from the form go in `[…]`.
+- **Filled-in forms (`D` documents, 20th-century blanks):** in the transcript printed text
+  stays plain and everything written by hand is `*italic*`; the page gets a `paper:` field
+  (`grey`, `white`, `pink`, `cream` or `yellow` — the colour of the original) so the
+  quote is on that paper and the handwritten italics show in blue ink. Say it in the
+  label: «вписанное от руки выделено курсивом». For a typed copy of the blank itself
+  (the form drawn in HTML/CSS) use the replica-* skills: replica-birth-certificate-1936,
+  replica-birth-certificate-1940s, replica-marriage-certificate-1940s,
+  replica-school-certificate-1930s.
 - **Always add «Пояснения к прочтению»** after the text: abbreviations, numbers, empty
   columns, neighbouring entries that matter, and which readings are guesses.
 - **Local files:** scans and PDFs are not published for now (see `D` above). Images for

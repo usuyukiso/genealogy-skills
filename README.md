@@ -18,6 +18,10 @@ Each skill is a folder with a `SKILL.md` (instructions for the agent), helper sc
 | [archidocs-form](archidocs-form/README.md) | Builds the Archidocs upload form from the rows you have checked, with modern names and patronymics; keeps earlier parts in sync with your later corrections | «Сделай форму Archidocs для части 4» |
 | [chronology-table](chronology-table/README.md) | Reads a chronology spreadsheet (one life event per row, `.ods/.xlsx/.csv`) into a clean list of facts with sources, comments and links | used by genealogy-biography; or «Проверь таблицу по Лапиной» |
 | [genealogy-biography](genealogy-biography/README.md) | Writes a person page of the website: the life story with verbatim quotes, one page per source document, the name index, links to places; builds the site to check links | «Напиши биографию Якова Писарева» |
+| [replica-birth-certificate-1936](replica-birth-certificate-1936/README.md) | Typed copy (HTML/CSS, laid out like the blank) of a late-1930s NKVD ZAGS birth certificate, incl. repeat ones from a church register, on a document page with a verbatim transcript | «Отрисуй свидетельство о рождении 1930-х по образцу бланка» |
+| [replica-birth-certificate-1940s](replica-birth-certificate-1940s/README.md) | The same for a war-years birth certificate (about 1941–1946, folded sheet with cover) | «Отрисуй свидетельство о рождении 1944 года» |
+| [replica-marriage-certificate-1940s](replica-marriage-certificate-1940s/README.md) | The same for a 1940s marriage certificate (ZAGS stamp, seal, surnames after marriage) | «Отрисуй свидетельство о браке 1945 года» |
+| [replica-school-certificate-1930s](replica-school-certificate-1930s/README.md) | The same for a 1930s school-leaving certificate (subjects and marks, ornamental frame) | «Отрисуй школьное свидетельство 1934 года» |
 
 ## How they fit together
 

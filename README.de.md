@@ -18,6 +18,10 @@ Jeder Skill ist ein Ordner mit einer `SKILL.md` (Anweisungen für den Agenten), 
 | [archidocs-form](archidocs-form/README.de.md) | Erstellt das Archidocs-Upload-Formular aus den von Ihnen geprüften Zeilen, mit modernen Vor- und Vatersnamen; gleicht frühere Teile mit Ihren späteren Korrekturen ab | «Сделай форму Archidocs для части 4» |
 | [chronology-table](chronology-table/README.de.md) | Liest eine chronologische Tabelle (eine Zeile pro Lebensereignis, `.ods/.xlsx/.csv`) zu einer bereinigten Faktenliste mit Quellen, Kommentaren und Links | wird von genealogy-biography genutzt; oder «Проверь таблицу по Лапиной» |
 | [genealogy-biography](genealogy-biography/README.de.md) | Schreibt die Personenseite der Website: Lebensgeschichte mit wörtlichen Zitaten, eine Seite pro Quelle, Namensregister, Verknüpfung mit Orten; baut die Website und prüft die Links | «Напиши биографию Якова Писарева» |
+| [replica-birth-certificate-1936](replica-birth-certificate-1936/README.de.md) | Gesetzte Kopie (HTML/CSS nach dem Formular) einer Geburtsurkunde der späten 1930er (Standesamt beim NKWD), auch Zweitschriften nach Kirchenbuch; auf einer Dokumentseite mit wörtlicher Abschrift | «Отрисуй свидетельство о рождении 1930-х по образцу бланка» |
+| [replica-birth-certificate-1940s](replica-birth-certificate-1940s/README.de.md) | Dasselbe für eine Geburtsurkunde der Kriegsjahre (etwa 1941–1946, gefaltetes Blatt mit Umschlag) | «Отрисуй свидетельство о рождении 1944 года» |
+| [replica-marriage-certificate-1940s](replica-marriage-certificate-1940s/README.de.md) | Dasselbe für eine Heiratsurkunde der 1940er (Standesamtsstempel, Siegel, Namen nach der Ehe) | «Отрисуй свидетельство о браке 1945 года» |
+| [replica-school-certificate-1930s](replica-school-certificate-1930s/README.de.md) | Dasselbe für ein Schulzeugnis der 1930er (Fächer und Noten, Ornamentrahmen) | «Отрисуй школьное свидетельство 1934 года» |
 
 ## Wie sie zusammenhängen
 
