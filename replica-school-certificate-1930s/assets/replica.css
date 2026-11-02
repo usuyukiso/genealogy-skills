@@ -441,3 +441,31 @@
   --doc-paper-line: #5c5434;
   --doc-ink-pen: #9cc0f2;
 }
+
+/* ---- compact, A4 proportions ---- */
+/* D1009: лист в пропорциях A4 (чуть длиннее, ≈ 1 : 1,5) — строки бланка плотнее. */
+.md-typeset .replica--school .replica__sheet { padding: 2.2cqw 2.2cqw 1cqw; }
+.md-typeset .replica--school .rp-sborder { padding: .6cqw; }
+.md-typeset .replica--school .rp-shead { padding: 1.2cqw 2cqw 0; }
+.md-typeset .replica--school .rp-sleft p + p { margin-top: .4cqw; }
+.md-typeset .replica--school .rp-sleft .rp-sl { min-height: 4.2cqw; }
+.md-typeset .replica--school .rp-stitle { margin-top: 3cqw; }
+.md-typeset .replica--school .rp-sbody { padding: 1.5cqw 3cqw .5cqw; line-height: 1.15; }
+.md-typeset .replica--school .rp-sl { min-height: 3.5cqw; }
+.md-typeset .replica--school .rp-sbody > .rp-sl { margin-top: .35cqw; }
+.md-typeset .replica--school .rp-sl:has(.rp-under) { margin-bottom: 1.7cqw; }
+.md-typeset .replica--school .rp-subj { margin: .6cqw 6cqw .8cqw 12cqw; }
+.md-typeset .replica--school .rp-subj p { min-height: 2.75cqw; }
+.md-typeset .replica--school .rp-subj p:last-child { min-height: 3.1cqw; }
+.md-typeset .replica--school .rp-h { font-size: 3.3cqw; line-height: 1; }
+.md-typeset .replica--school .rp-under { bottom: -1.9cqw; font-size: 1.4cqw; }
+.md-typeset .replica--school .rp-sfoot { margin-top: 1cqw; }
+.md-typeset .replica--school .rp-sseal { padding-top: 3.5cqw; }
+.md-typeset .replica--school .rp-ssign p { margin-top: 1.2cqw; }
+
+/* Таблицы в тексте на жёлтом листе — без лишней высоты строк. */
+.md-typeset .doc-paper-yellow blockquote table :is(th, td) {
+  padding: .25em .9em;
+  line-height: 1.35;
+}
+

@@ -331,8 +331,12 @@ accessed: "<today, YYYY-MM-DD>"
   `_ocr/` folders of the Peasant Land Bank scans) is a search aid only: never quote it —
   read the passage on the scan and label it «прочтение скана». If you add a new kind of
   label, add it to «Откуда взяты цитаты» too.
-  The label line is always **bold** (`**Текст записи (прочтение скана):**`) and stands on its
-  own line right before the quote or list. Every block of quoted or retold text on a source
+  In the label only the term from «Откуда взяты цитаты» is **bold**, not the whole line:
+  `Текст записи (**прочтение скана**):`, `Текст (**расшифровка составителя**):`,
+  `Текст записи (**распознавание Яндекс Архива**):`, `**Текст недоступен:**`; other words
+  in the brackets stay plain (`Текст свидетельства (**прочтение скана**; вписанное от руки
+  выделено курсивом, сомнительное отмечено «[?]»):`). The label stands on its own line
+  right before the quote or list. Every block of quoted or retold text on a source
   page gets its own label, even when it is a list rather than a table. If a page is based on
   a search through Yandex OCR (or any machine text), say so explicitly and in bold
   («**по распознаванию Яндекс Архива**»): which parts were only searched by OCR, which were
