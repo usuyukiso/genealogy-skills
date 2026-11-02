@@ -8,6 +8,8 @@ Erstellt eine **gesetzte Kopie einer sowjetischen Heiratsurkunde der 1940er Jahr
 
 Beispiel: [D1008 — Heiratsurkunde von Pawel Dawydow und Ljubow Potscherewina, 1945](https://usuyukiso.github.io/family-history/sources/documents/D1008-svidetelstvo-o-brake-davydov-pavel-1945/).
 
+![Gesetzte Kopie der Heiratsurkunde D1008](assets/example-D1008.jpg)
+
 ## Starten
 
 Der Skill startet von selbst, wenn Ihre Bitte passt, zum Beispiel:

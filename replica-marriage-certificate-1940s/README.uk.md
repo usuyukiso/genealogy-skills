@@ -8,6 +8,8 @@
 
 Приклад: [D1008 — свідоцтво про шлюб Павла Давидова й Любові Почеревіної, 1945](https://usuyukiso.github.io/family-history/sources/documents/D1008-svidetelstvo-o-brake-davydov-pavel-1945/).
 
+![Набрана копія свідоцтва про шлюб D1008](assets/example-D1008.jpg)
+
 ## Як запустити
 
 Навичка запуститься сама, якщо ваше прохання їй підходить, наприклад:

@@ -280,3 +280,21 @@
   --doc-paper-line: #57513f;
   --doc-ink-pen: #9cc0f2;
 }
+
+/* ---- type: late-1930s birth certificate, compact (.replica--1936) ---- */
+/* Свидетельство о рождении конца 1930-х (D1000): оригинал почти квадратный (1 : 1,14),
+   поэтому отступы между графами меньше, чем в базовом бланке. */
+.md-typeset .replica--1936 .replica__frame { padding: 2.2cqw 3.5cqw 2cqw; }
+.md-typeset .replica--1936 .rp-head { margin-top: .5cqw; }
+.md-typeset .replica--1936 .rp-title { margin: 2.5cqw 0 .5cqw; }
+.md-typeset .replica--1936 .rp-num { margin-bottom: .5cqw; }
+.md-typeset .replica--1936 .rp-row { margin-top: .2cqw; }
+.md-typeset .replica--1936 .rp-lbl { padding-top: 2.2cqw; }
+.md-typeset .replica--1936 .rp-hand,
+.md-typeset .replica--1936 .rp-fld > span:first-child { min-height: 4cqw; line-height: 1.05; }
+.md-typeset .replica--1936 .rp-grp { margin-top: 1cqw; }
+.md-typeset .replica--1936 .rp-foot { margin-top: 1.5cqw; }
+.md-typeset .replica--1936 .rp-seal { width: 10cqw; height: 10cqw; }
+.md-typeset .replica--1936 .rp-stamp { width: 13cqw; height: 13cqw; }
+.md-typeset .replica--1936 .rp-sign s { margin-top: 2.5cqw; }
+

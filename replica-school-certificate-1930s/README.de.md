@@ -8,6 +8,8 @@ Erstellt eine **gesetzte Kopie eines sowjetischen Schulabschlusszeugnisses der 1
 
 Beispiel: [D1009 — Schulzeugnis von Grigorij Pisarew, 1934](https://usuyukiso.github.io/family-history/sources/documents/D1009-svidetelstvo-ob-okonchanii-shkoly-pisarev-grigoriy-1934/).
 
+![Gesetzte Kopie des Schulzeugnisses D1009](assets/example-D1009.jpg)
+
 ## Starten
 
 Der Skill startet von selbst, wenn Ihre Bitte passt, zum Beispiel:

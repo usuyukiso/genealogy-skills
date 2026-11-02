@@ -8,6 +8,8 @@ Makes a **typed copy of a Soviet birth certificate of the late 1930s** (NKVD USS
 
 Example: [D1000 — birth certificate of Pavel Davydov](https://usuyukiso.github.io/family-history/sources/documents/D1000-svidetelstvo-o-rozhdenii-davydov-pavel-1930e/).
 
+![Typed copy of the D1000 birth certificate: front and back](assets/example-D1000.jpg)
+
 ## How to start
 
 The skill starts by itself when your request fits it, for example:

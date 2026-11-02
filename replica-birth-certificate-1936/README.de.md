@@ -8,6 +8,8 @@ Erstellt eine **gesetzte Kopie einer sowjetischen Geburtsurkunde der späten 193
 
 Beispiel: [D1000 — Geburtsurkunde von Pawel Dawydow](https://usuyukiso.github.io/family-history/sources/documents/D1000-svidetelstvo-o-rozhdenii-davydov-pavel-1930e/).
 
+![Gesetzte Kopie der Geburtsurkunde D1000: Vorder- und Rückseite](assets/example-D1000.jpg)
+
 ## Starten
 
 Der Skill startet von selbst, wenn Ihre Bitte passt, zum Beispiel:

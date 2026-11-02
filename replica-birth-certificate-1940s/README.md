@@ -8,6 +8,8 @@ Makes a **typed copy of a Soviet birth certificate of the war years** (about 194
 
 Example: [D1001 — birth certificate of Valeriy Pisarev, 1942](https://usuyukiso.github.io/family-history/sources/documents/D1001-svidetelstvo-o-rozhdenii-pisarev-valeriy-1942/).
 
+![Typed copy of the D1001 birth certificate: unfolded cover and inside](assets/example-D1001.jpg)
+
 ## How to start
 
 The skill starts by itself when your request fits it, for example:

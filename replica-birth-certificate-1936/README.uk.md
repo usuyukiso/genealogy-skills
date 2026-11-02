@@ -8,6 +8,8 @@
 
 Приклад: [D1000 — свідоцтво про народження Павла Давидова](https://usuyukiso.github.io/family-history/sources/documents/D1000-svidetelstvo-o-rozhdenii-davydov-pavel-1930e/).
 
+![Набрана копія свідоцтва про народження D1000: лицьовий і зворотний боки](assets/example-D1000.jpg)
+
 ## Як запустити
 
 Навичка запуститься сама, якщо ваше прохання їй підходить, наприклад:

@@ -8,6 +8,8 @@
 
 Пример: [D1000 — свидетельство о рождении Павла Давыдова](https://usuyukiso.github.io/family-history/sources/documents/D1000-svidetelstvo-o-rozhdenii-davydov-pavel-1930e/).
 
+![Набранная копия свидетельства о рождении D1000: лицевая и оборотная стороны](assets/example-D1000.jpg)
+
 ## Как запустить
 
 Навык запустится сам, если ваша просьба ему подходит, например:

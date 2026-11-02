@@ -8,6 +8,8 @@ Makes a **typed copy of a Soviet marriage certificate of the 1940s** (NKVD USSR 
 
 Example: [D1008 — marriage certificate of Pavel Davydov and Lyubov Pocherevina, 1945](https://usuyukiso.github.io/family-history/sources/documents/D1008-svidetelstvo-o-brake-davydov-pavel-1945/).
 
+![Typed copy of the D1008 marriage certificate](assets/example-D1008.jpg)
+
 ## How to start
 
 The skill starts by itself when your request fits it, for example:

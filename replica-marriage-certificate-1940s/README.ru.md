@@ -8,6 +8,8 @@
 
 Пример: [D1008 — свидетельство о браке Павла Давыдова и Любови Почеревиной, 1945](https://usuyukiso.github.io/family-history/sources/documents/D1008-svidetelstvo-o-brake-davydov-pavel-1945/).
 
+![Набранная копия свидетельства о браке D1008](assets/example-D1008.jpg)
+
 ## Как запустить
 
 Навык запустится сам, если ваша просьба ему подходит, например:

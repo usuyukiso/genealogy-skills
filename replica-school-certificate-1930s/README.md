@@ -8,6 +8,8 @@ Makes a **typed copy of a Soviet school-leaving certificate of the 1930s** («С
 
 Example: [D1009 — school certificate of Grigoriy Pisarev, 1934](https://usuyukiso.github.io/family-history/sources/documents/D1009-svidetelstvo-ob-okonchanii-shkoly-pisarev-grigoriy-1934/).
 
+![Typed copy of the D1009 school certificate](assets/example-D1009.jpg)
+
 ## How to start
 
 The skill starts by itself when your request fits it, for example:

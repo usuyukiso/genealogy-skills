@@ -8,6 +8,8 @@
 
 Приклад: [D1009 — свідоцтво про закінчення школи Григорія Писарева, 1934](https://usuyukiso.github.io/family-history/sources/documents/D1009-svidetelstvo-ob-okonchanii-shkoly-pisarev-grigoriy-1934/).
 
+![Набрана копія шкільного свідоцтва D1009](assets/example-D1009.jpg)
+
 ## Як запустити
 
 Навичка запуститься сама, якщо ваше прохання їй підходить, наприклад:

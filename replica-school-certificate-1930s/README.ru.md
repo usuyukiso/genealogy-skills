@@ -8,6 +8,8 @@
 
 Пример: [D1009 — свидетельство об окончании школы Григория Писарева, 1934](https://usuyukiso.github.io/family-history/sources/documents/D1009-svidetelstvo-ob-okonchanii-shkoly-pisarev-grigoriy-1934/).
 
+![Набранная копия школьного свидетельства D1009](assets/example-D1009.jpg)
+
 ## Как запустить
 
 Навык запустится сам, если ваша просьба ему подходит, например:

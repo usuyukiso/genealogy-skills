@@ -350,3 +350,19 @@
   --doc-paper-line: #4a4c52;
 }
 
+
+/* ---- inside sheet, compact (.rp-inner) ---- */
+/* Свидетельство о рождении 1940-х (D1001), внутренняя сторона (.rp-inner): тот же альбомный
+   лист, что и обложка, — графы плотнее, чтобы лист не казался квадратным (≈ 1 : 0,7). */
+.md-typeset .replica--wide .rp-inner .replica__frame { padding: 1.2cqw 3cqw 1.5cqw; }
+.md-typeset .replica--wide .rp-inner .rp-row { margin-top: .1cqw; }
+.md-typeset .replica--wide .rp-inner .rp-hand,
+.md-typeset .replica--wide .rp-inner .rp-fld > span:first-child { min-height: 3cqw; line-height: 1.05; }
+.md-typeset .replica--wide .rp-inner .rp-lbl { padding-top: 1.5cqw; }
+.md-typeset .replica--wide .rp-inner .rp-grp { margin-top: .4cqw; }
+.md-typeset .replica--wide .rp-inner .rp-foot { margin-top: .6cqw; }
+.md-typeset .replica--wide .rp-inner .rp-seal { width: 8cqw; height: 8cqw; }
+.md-typeset .replica--wide .rp-inner .rp-stamp { width: 10cqw; height: 10cqw; }
+.md-typeset .replica--wide .rp-inner .rp-date { margin-top: .8cqw; }
+.md-typeset .replica--wide .rp-inner .rp-sign .rp-sign2 { margin-top: .4cqw; }
+

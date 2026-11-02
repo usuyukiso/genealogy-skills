@@ -8,6 +8,8 @@ Erstellt eine **gesetzte Kopie einer sowjetischen Geburtsurkunde der Kriegsjahre
 
 Beispiel: [D1001 — Geburtsurkunde von Walerij Pisarew, 1942](https://usuyukiso.github.io/family-history/sources/documents/D1001-svidetelstvo-o-rozhdenii-pisarev-valeriy-1942/).
 
+![Gesetzte Kopie der Geburtsurkunde D1001: aufgeklappter Umschlag und Innenseite](assets/example-D1001.jpg)
+
 ## Starten
 
 Der Skill startet von selbst, wenn Ihre Bitte passt, zum Beispiel:
