@@ -301,7 +301,7 @@ accessed: "<today, YYYY-MM-DD>"
 1. «<column heading, verbatim, old spelling>»;
 2. «…».
 
-Текст записи (распознавание Яндекс Архива / прочтение скана):
+**Текст записи (распознавание Яндекс Архива / прочтение скана):**
 
 > | 1 | 2 | 3 | … |
 > |---|---|---|---|
@@ -331,6 +331,12 @@ accessed: "<today, YYYY-MM-DD>"
   `_ocr/` folders of the Peasant Land Bank scans) is a search aid only: never quote it —
   read the passage on the scan and label it «прочтение скана». If you add a new kind of
   label, add it to «Откуда взяты цитаты» too.
+  The label line is always **bold** (`**Текст записи (прочтение скана):**`) and stands on its
+  own line right before the quote or list. Every block of quoted or retold text on a source
+  page gets its own label, even when it is a list rather than a table. If a page is based on
+  a search through Yandex OCR (or any machine text), say so explicitly and in bold
+  («**по распознаванию Яндекс Архива**»): which parts were only searched by OCR, which were
+  read on the scan, and that OCR misses distorted names.
 - If there is no text: a bold **Текст недоступен:** line saying why. If a scan was searched
   for and not found, list the search queries tried.
 - Titles and the page heading stay neutral: what the document is, not the person's story.
