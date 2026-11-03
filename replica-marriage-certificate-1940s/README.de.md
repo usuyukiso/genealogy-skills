@@ -14,8 +14,8 @@ Beispiel: [D1008 — Heiratsurkunde von Pawel Dawydow und Ljubow Potscherewina, 
 
 Der Skill startet von selbst, wenn Ihre Bitte passt, zum Beispiel:
 
-- «Отрисуй свидетельство о браке 1945 года по образцу бланка»
-- "Make a replica of this 1940s marriage certificate."
+- „Zeichne die Heiratsurkunde von 1945 nach dem Formular nach.“
+- „Erstelle eine Kopie dieser Heiratsurkunde aus den 1940er Jahren.“
 
 Oder direkt: `/replica-marriage-certificate-1940s <Scan-Datei>`.
 

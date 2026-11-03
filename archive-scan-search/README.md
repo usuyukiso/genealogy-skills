@@ -10,9 +10,9 @@ Searches a large folder of archive photos — thousands of frames from many delo
 
 The skill starts by itself when your request fits it — just describe the task in Claude Code, for example:
 
-- «Поищи деревню Глазки в делах Крестьянского банка по Ржевскому уезду»
-- «Прочитай Гомельский уезд, там наши деревни Глазовка и Рудня-Бартоломеевская»
-- «Составь список населённых пунктов, которые упоминаются в этих делах»
+- "Look for the village of Glazki in the Peasant Land Bank delos for Rzhev uyezd"
+- "Read Gomel uyezd, our villages Glazovka and Rudnya-Bartolomeevskaya are there"
+- "Make a list of the settlements mentioned in these delos"
 
 Or start it directly: `/archive-scan-search <folder> <what to look for>`.
 

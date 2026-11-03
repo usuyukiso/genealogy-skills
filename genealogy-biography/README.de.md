@@ -53,7 +53,7 @@ oder in Ihre persönlichen Skills (`~/.claude/skills/`), um sie in allen Projekt
 
 Der Skill startet von selbst, wenn Ihre Bitte zu ihm passt — beschreiben Sie die Aufgabe einfach in Claude Code (oder starten Sie ihn direkt mit `/genealogy-biography`), zum Beispiel:
 
-- *«Напиши биографию Евдокии Лапиной по таблице `sources/people_all.xlsx`»*
+- *„Schreibe eine Biografie von Jewdokija Lapina nach der Tabelle `sources/people_all.xlsx`.“*
 - *„Aktualisiere die Seite von Grigori Pissarew: Füge die Verlustmeldung von 1943 mit Zitat hinzu.“*
 - *„Schreibe eine Biografie anhand dieser drei Kirchenbuch-Scans in Yandex Archive.“*
 

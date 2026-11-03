@@ -23,7 +23,7 @@ The skill is built for a Russian-language [MkDocs Material](https://squidfunk.gi
 
 - **Nothing is invented.** No names, dates, relatives, archive references or quotes that are not in the input. Where the records are silent, the text says so.
 - **Every fact has a source,** and the link leads to the exact record, not to an overview page.
-- **Inferences are labelled.** A hypothesis goes into the research notes and starts with «Предположение (не подтверждено документами)», with arguments for and against and what could confirm it.
+- **Inferences are labelled.** A hypothesis goes into the research notes and starts with «Предположение (не подтверждено документами)» ("Assumption, not confirmed by documents"), with arguments for and against and what could confirm it.
 - **Kinship is proven link by link.** Each parent–child and spouse link has its own sources; a distant ancestor is proven only through a chain of proven links. Copies of one record are one source. A patronymic names the father but does not show which man he was; a shared surname, village or household is not evidence of kinship.
 - **Namesakes stay separate.** Two people with the same name and patronymic in one village are kept apart until records distinguish them.
 - **Disagreements are shown, not hidden.** Both versions are given side by side, with who supplied the information and when.
@@ -53,7 +53,7 @@ or into your personal skills (`~/.claude/skills/`) to use them across projects. 
 
 The skill starts by itself when your request fits it — just describe the task in Claude Code (or start it directly with `/genealogy-biography`), for example:
 
-- *«Напиши биографию Евдокии Лапиной по таблице `sources/people_all.xlsx`»*
+- *"Write a biography of Evdokiya Lapina from the table `sources/people_all.xlsx`."*
 - *"Update the page of Grigory Pisarev: add the 1943 loss report and quote it."*
 - *"Write a biography from these three metric-book scans on Yandex Archive."*
 

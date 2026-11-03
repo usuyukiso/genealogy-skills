@@ -10,8 +10,8 @@ Makes the spreadsheet for uploading people to Archidocs from the rows of `people
 
 The skill starts by itself when your request fits it — just describe the task in Claude Code, for example:
 
-- «Сделай форму Archidocs для части 4»
-- «Я проверил строки, собери форму для загрузки»
+- "Make the Archidocs form for part 4."
+- "I've checked the rows, build the upload form."
 - "Rebuild the Archidocs forms after my corrections in people_all."
 
 Or start it directly: `/archidocs-form <part or scans>`.

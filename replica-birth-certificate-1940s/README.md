@@ -14,7 +14,7 @@ Example: [D1001 — birth certificate of Valeriy Pisarev, 1942](https://usuyukis
 
 The skill starts by itself when your request fits it, for example:
 
-- «Отрисуй свидетельство о рождении 1944 года по образцу бланка»
+- "Draw the 1944 birth certificate after the blank form."
 - "Make a replica of this 1940s birth certificate."
 
 Or start it directly: `/replica-birth-certificate-1940s <scan file>`.

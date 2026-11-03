@@ -10,16 +10,16 @@ Copies a confession list (or a metric book, or a similar parish register) from t
 
 The skill starts by itself when your request fits it — just describe the task in Claude Code, for example:
 
-- «Внеси сканы 078–081 в people_all»
-- «Оцифруй следующие четыре листа исповедной ведомости»
+- "Enter scans 078–081 into people_all."
+- "Digitize the next four leaves of the confession list."
 - "Transcribe these confession-list scans into the spreadsheet."
 
 Or start it directly: `/scans-to-people-all <scans>`.
 
 ## What you get
 
-- New rows in `people_all`: surname, name, patronymic, age, year of birth, household (двор) number, the clerk's running numbers, relation («жена», «дети их»), page and scan file name.
-- Words that are hard to read are **filled yellow** with a note «читается неуверенно (А / Б)» — you check them against the scan and remove the fill.
+- New rows in `people_all`: surname, name, patronymic, age, year of birth, household (двор) number, the clerk's running numbers, relation as written («жена» — wife, «дети их» — their children), page and scan file name.
+- Words that are hard to read are **filled yellow** with a note «читается неуверенно (А / Б)» ("uncertain reading: A / B") — you check them against the scan and remove the fill.
 - Surnames or patronymics that are not written in the document are in italics.
 - A short report: how many people on each leaf, how many doubtful readings.
 

@@ -12,16 +12,16 @@ Jeder Skill ist ein Ordner mit einer `SKILL.md` (Anweisungen für den Agenten), 
 
 | Skill | Was er tut | Zum Beispiel fragen |
 |---|---|---|
-| [archive-scan-search](archive-scan-search/README.de.md) | Durchsucht einen großen Ordner mit Archivscans (Tausende Aufnahmen, viele Akten): Texterkennung jeder Aufnahme, Zuordnung Aufnahme → Akte anhand der Mikrofilmkarten, Suche nach Wortteilen, Prüfung jedes Treffers am Scan, Ortsregister | «Поищи деревню Глазки в делах Крестьянского банка по Ржевскому уезду» |
-| [metric-book-index](metric-book-index/README.de.md) | Liest ein ganzes Kirchenbuch Aufnahme für Aufnahme und erstellt ein internes Register aller Geburten, Ehen und Todesfälle, mit ★ bei den gesuchten Personen; lässt sich fortsetzen | «Дочитай метрики Дрогачева за 1892 год» |
-| [scans-to-people-all](scans-to-people-all/README.de.md) | Überträgt eine Beichtliste oder ein Register in `people_all.xlsx` (Blatt `people_all`), eine Zeile pro Person, in der Schreibweise des Dokuments; Zweifelhaftes gelb markiert; hält dann für Ihre Prüfung an | «Внеси сканы 078–081 в people_all» |
-| [archidocs-form](archidocs-form/README.de.md) | Erstellt das Archidocs-Upload-Formular aus den von Ihnen geprüften Zeilen, mit modernen Vor- und Vatersnamen; gleicht frühere Teile mit Ihren späteren Korrekturen ab | «Сделай форму Archidocs для части 4» |
-| [chronology-table](chronology-table/README.de.md) | Liest eine chronologische Tabelle (eine Zeile pro Lebensereignis, `.ods/.xlsx/.csv`) zu einer bereinigten Faktenliste mit Quellen, Kommentaren und Links | wird von genealogy-biography genutzt; oder «Проверь таблицу по Лапиной» |
-| [genealogy-biography](genealogy-biography/README.de.md) | Schreibt die Personenseite der Website: Lebensgeschichte mit wörtlichen Zitaten, eine Seite pro Quelle, Namensregister, Verknüpfung mit Orten; baut die Website und prüft die Links | «Напиши биографию Якова Писарева» |
-| [replica-birth-certificate-1936](replica-birth-certificate-1936/README.de.md) | Gesetzte Kopie (HTML/CSS nach dem Formular) einer Geburtsurkunde der späten 1930er (Standesamt beim NKWD), auch Zweitschriften nach Kirchenbuch; auf einer Dokumentseite mit wörtlicher Abschrift | «Отрисуй свидетельство о рождении 1930-х по образцу бланка» |
-| [replica-birth-certificate-1940s](replica-birth-certificate-1940s/README.de.md) | Dasselbe für eine Geburtsurkunde der Kriegsjahre (etwa 1941–1946, gefaltetes Blatt mit Umschlag) | «Отрисуй свидетельство о рождении 1944 года» |
-| [replica-marriage-certificate-1940s](replica-marriage-certificate-1940s/README.de.md) | Dasselbe für eine Heiratsurkunde der 1940er (Standesamtsstempel, Siegel, Namen nach der Ehe) | «Отрисуй свидетельство о браке 1945 года» |
-| [replica-school-certificate-1930s](replica-school-certificate-1930s/README.de.md) | Dasselbe für ein Schulzeugnis der 1930er (Fächer und Noten, Ornamentrahmen) | «Отрисуй школьное свидетельство 1934 года» |
+| [archive-scan-search](archive-scan-search/README.de.md) | Durchsucht einen großen Ordner mit Archivscans (Tausende Aufnahmen, viele Akten): Texterkennung jeder Aufnahme, Zuordnung Aufnahme → Akte anhand der Mikrofilmkarten, Suche nach Wortteilen, Prüfung jedes Treffers am Scan, Ortsregister | „Suche das Dorf Glazki in den Akten der Bauernlandbank für den Kreis Rschew“ |
+| [metric-book-index](metric-book-index/README.de.md) | Liest ein ganzes Kirchenbuch Aufnahme für Aufnahme und erstellt ein internes Register aller Geburten, Ehen und Todesfälle, mit ★ bei den gesuchten Personen; lässt sich fortsetzen | „Lies die Kirchenbücher von Drogatschewo für 1892 zu Ende“ |
+| [scans-to-people-all](scans-to-people-all/README.de.md) | Überträgt eine Beichtliste oder ein Register in `people_all.xlsx` (Blatt `people_all`), eine Zeile pro Person, in der Schreibweise des Dokuments; Zweifelhaftes gelb markiert; hält dann für Ihre Prüfung an | „Trage die Scans 078–081 in people_all ein“ |
+| [archidocs-form](archidocs-form/README.de.md) | Erstellt das Archidocs-Upload-Formular aus den von Ihnen geprüften Zeilen, mit modernen Vor- und Vatersnamen; gleicht frühere Teile mit Ihren späteren Korrekturen ab | „Erstelle das Archidocs-Formular für Teil 4“ |
+| [chronology-table](chronology-table/README.de.md) | Liest eine chronologische Tabelle (eine Zeile pro Lebensereignis, `.ods/.xlsx/.csv`) zu einer bereinigten Faktenliste mit Quellen, Kommentaren und Links | wird von genealogy-biography genutzt; oder „Prüfe die Tabelle zu Lapina“ |
+| [genealogy-biography](genealogy-biography/README.de.md) | Schreibt die Personenseite der Website: Lebensgeschichte mit wörtlichen Zitaten, eine Seite pro Quelle, Namensregister, Verknüpfung mit Orten; baut die Website und prüft die Links | „Schreibe eine Biografie von Jakow Pissarew“ |
+| [replica-birth-certificate-1936](replica-birth-certificate-1936/README.de.md) | Gesetzte Kopie (HTML/CSS nach dem Formular) einer Geburtsurkunde der späten 1930er (Standesamt beim NKWD), auch Zweitschriften nach Kirchenbuch; auf einer Dokumentseite mit wörtlicher Abschrift | „Zeichne die Geburtsurkunde der 1930er nach dem Formular nach“ |
+| [replica-birth-certificate-1940s](replica-birth-certificate-1940s/README.de.md) | Dasselbe für eine Geburtsurkunde der Kriegsjahre (etwa 1941–1946, gefaltetes Blatt mit Umschlag) | „Zeichne die Geburtsurkunde von 1944 nach“ |
+| [replica-marriage-certificate-1940s](replica-marriage-certificate-1940s/README.de.md) | Dasselbe für eine Heiratsurkunde der 1940er (Standesamtsstempel, Siegel, Namen nach der Ehe) | „Zeichne die Heiratsurkunde von 1945 nach“ |
+| [replica-school-certificate-1930s](replica-school-certificate-1930s/README.de.md) | Dasselbe für ein Schulzeugnis der 1930er (Fächer und Noten, Ornamentrahmen) | „Zeichne das Schulzeugnis von 1934 nach“ |
 
 ## Wie sie zusammenhängen
 
@@ -100,10 +100,10 @@ Zum Aktualisieren `git pull` im heruntergeladenen Ordner ausführen und die Skil
 1. Öffnen Sie ein Terminal **im Projektordner** (dort, wo `family_tree_github/` und `sources/` liegen) und starten Sie Claude Code: `claude`.
 2. Beschreiben Sie die Aufgabe in eigenen Worten, in jeder Sprache. Ein Skill startet von selbst, wenn Ihre Bitte zu ihm passt. Beispiele:
    - „Die Kirchenbücher sollen gelesen und digitalisiert werden“ → metric-book-index
-   - «Поищи деревню Глазки в делах Крестьянского банка по Ржевскому уезду» → archive-scan-search
-   - «Внеси сканы 078–081 в people_all» → scans-to-people-all; Sie prüfen die Zeilen; dann «Сделай форму Archidocs для части 4» → archidocs-form
-   - «Напиши биографию Якова Писарева по таблице» → genealogy-biography (mit chronology-table)
-3. Um einen bestimmten Skill selbst zu starten, beginnen Sie die Nachricht mit `/` und seinem Namen: `/metric-book-index дочитай Дрогачево`.
+   - „Suche das Dorf Glazki in den Akten der Bauernlandbank für den Kreis Rschew“ → archive-scan-search
+   - „Trage die Scans 078–081 in people_all ein“ → scans-to-people-all; Sie prüfen die Zeilen; dann „Erstelle das Archidocs-Formular für Teil 4“ → archidocs-form
+   - „Schreibe eine Biografie von Jakow Pissarew nach der Tabelle“ → genealogy-biography (mit chronology-table)
+3. Um einen bestimmten Skill selbst zu starten, beginnen Sie die Nachricht mit `/` und seinem Namen: `/metric-book-index lies Drogatschewo zu Ende`.
 4. Lange Aufgaben (Texterkennung von Tausenden Aufnahmen, ein ganzes Kirchenbuch) laufen in Schritten; die Skills speichern den Fortschritt in ihren Dateien, sodass Sie anhalten und später „weiter“ sagen können — die Arbeit setzt an derselben Stelle fort.
 5. Lesen Sie am Ende den Bericht des Agenten: was gefunden wurde, was nicht, was Sie prüfen sollten. Auf der Website wird nichts veröffentlicht, solange Sie es nicht wünschen.
 

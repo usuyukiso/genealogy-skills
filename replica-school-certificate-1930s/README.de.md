@@ -14,8 +14,8 @@ Beispiel: [D1009 — Schulzeugnis von Grigorij Pisarew, 1934](https://usuyukiso.
 
 Der Skill startet von selbst, wenn Ihre Bitte passt, zum Beispiel:
 
-- «Отрисуй 1934.09.07_PisarevGrigYak_School_certificate.pdf по образцу бланка»
-- "Make a replica of this 1930s school certificate."
+- „Zeichne 1934.09.07_PisarevGrigYak_School_certificate.pdf nach dem Formular nach.“
+- „Erstelle eine Kopie dieses Schulzeugnisses aus den 1930er Jahren.“
 
 Oder direkt: `/replica-school-certificate-1930s <Scan-Datei>`.
 

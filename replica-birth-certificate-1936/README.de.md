@@ -14,8 +14,8 @@ Beispiel: [D1000 — Geburtsurkunde von Pawel Dawydow](https://usuyukiso.github.
 
 Der Skill startet von selbst, wenn Ihre Bitte passt, zum Beispiel:
 
-- «Отрисуй свидетельство о рождении 1916.06.22_birth_DavPavelIvan.tif по образцу бланка»
-- "Make a replica of this 1930s birth certificate."
+- „Zeichne die Geburtsurkunde 1916.06.22_birth_DavPavelIvan.tif nach dem Formular nach.“
+- „Erstelle eine Kopie dieser Geburtsurkunde aus den 1930er Jahren.“
 
 Oder direkt: `/replica-birth-certificate-1936 <Scan-Datei>`.
 

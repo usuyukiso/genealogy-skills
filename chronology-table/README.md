@@ -10,9 +10,9 @@ Reads a chronology spreadsheet about one person — one life event per row (birt
 
 The skill starts by itself when your request fits it — just describe the task in Claude Code, for example:
 
-- «Проверь таблицу по Лапиной»
+- "Check the table on Lapina."
 - "What does the table say about Grigory's children?"
-- «Напиши биографию по таблице `sources/people_all.xlsx`» — then genealogy-biography uses this skill to read the table.
+- "Write a biography from the table `sources/people_all.xlsx`" — then genealogy-biography uses this skill to read the table.
 
 Or start it directly: `/chronology-table <file>`.
 

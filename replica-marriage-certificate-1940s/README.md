@@ -14,7 +14,7 @@ Example: [D1008 — marriage certificate of Pavel Davydov and Lyubov Pocherevina
 
 The skill starts by itself when your request fits it, for example:
 
-- «Отрисуй свидетельство о браке 1945 года по образцу бланка»
+- "Draw the 1945 marriage certificate after the blank form."
 - "Make a replica of this 1940s marriage certificate."
 
 Or start it directly: `/replica-marriage-certificate-1940s <scan file>`.

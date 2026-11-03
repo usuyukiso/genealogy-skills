@@ -14,7 +14,7 @@ Example: [D1000 — birth certificate of Pavel Davydov](https://usuyukiso.github
 
 The skill starts by itself when your request fits it, for example:
 
-- «Отрисуй свидетельство о рождении 1916.06.22_birth_DavPavelIvan.tif по образцу бланка»
+- "Draw the birth certificate 1916.06.22_birth_DavPavelIvan.tif after the blank form."
 - "Make a replica of this 1930s birth certificate."
 
 Or start it directly: `/replica-birth-certificate-1936 <scan file>`.

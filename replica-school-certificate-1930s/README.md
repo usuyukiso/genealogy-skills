@@ -14,7 +14,7 @@ Example: [D1009 — school certificate of Grigoriy Pisarev, 1934](https://usuyuk
 
 The skill starts by itself when your request fits it, for example:
 
-- «Отрисуй 1934.09.07_PisarevGrigYak_School_certificate.pdf по образцу бланка»
+- "Draw 1934.09.07_PisarevGrigYak_School_certificate.pdf after the blank form."
 - "Make a replica of this 1930s school certificate."
 
 Or start it directly: `/replica-school-certificate-1930s <scan file>`.
