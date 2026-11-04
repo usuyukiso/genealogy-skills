@@ -354,6 +354,16 @@ accessed: "<today, YYYY-MM-DD>"
   the original code as the file name in the author's library, with its extension:
   «В личной библиотеке автора сайта документ хранится как файл `<code>.<ext>`.» Never
   write a bare `[исходный код: …]`.
+- **Keep the original spelling in transcripts.** A reading of a pre-1918 scan keeps ъ, ѣ, і,
+  ѳ, ѵ and old endings exactly as written («Иванъ Ивановъ», «Алексѣева», «третій»,
+  «Ѳекла», «умеръ въ 1852 году») — never modernize them, and never write «буквы … заменены
+  современными» (user, 2026-11-04: «передать дух времени»). Yandex OCR text is quoted as
+  given too. Modern spelling is only for the page's own prose (biography text, «Пояснения»,
+  titles) and for people_all / Archidocs forms.
+- **Every transcript is on paper.** All quoted document text and every transcript table goes
+  inside a quote (`> `), whatever the century: the `document_age.py` hook and `extra.css`
+  colour quotes by `document_date` (pre-1800 → aged paper `doc-18c`, otherwise «old paper»)
+  or by `paper:`. A table outside `> ` is shown as a plain site table — a bug.
 - **Digitize records as tables, close to the original.** Whenever the record is a form,
   register or list with columns, reproduce it as a Markdown table with the same columns in
   the same order, inside a quote (`> | … |`) so it gets the «old paper» style from
