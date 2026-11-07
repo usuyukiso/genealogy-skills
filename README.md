@@ -18,6 +18,8 @@ Each skill is a folder with a `SKILL.md` (instructions for the agent), helper sc
 | [archidocs-form](archidocs-form/README.md) | Builds the Archidocs upload form from the rows you have checked, with modern names and patronymics; keeps earlier parts in sync with your later corrections | "Make the Archidocs form for part 4" |
 | [chronology-table](chronology-table/README.md) | Reads a chronology spreadsheet (one life event per row, `.ods/.xlsx/.csv`) into a clean list of facts with sources, comments and links | used by genealogy-biography; or "Check the table on Lapina" |
 | [genealogy-biography](genealogy-biography/README.md) | Writes a person page of the website: the life story with verbatim quotes, one page per source document, the name index, links to places; builds the site to check links | "Write a biography of Yakov Pisarev" |
+| [source-page](source-page/README.md) | Makes or fixes one source page: year-first title, the delo named as on its cover or in the archive inventory (in bordeaux), where the scan lies, a labelled verbatim transcript, guesses marked as guesses; registers it in the index, menu and check lists | "Make a source page for the 1709 census, village Borovovo" |
+| [place-page](place-page/README.md) | Makes or tidies a village page in time order: church parish by period, division before 1917 by period, every mention in documents by year, the compiler's conclusions with anchors | "On the Gorelik page, list all mentions by year" |
 | [replica-birth-certificate-1936](replica-birth-certificate-1936/README.md) | Typed copy (HTML/CSS, laid out like the blank) of a late-1930s NKVD ZAGS birth certificate, incl. repeat ones from a church register, on a document page with a verbatim transcript | "Draw the 1930s birth certificate after the blank form" |
 | [replica-birth-certificate-1940s](replica-birth-certificate-1940s/README.md) | The same for a war-years birth certificate (about 1941–1946, folded sheet with cover) | "Draw the 1944 birth certificate" |
 | [replica-marriage-certificate-1940s](replica-marriage-certificate-1940s/README.md) | The same for a 1940s marriage certificate (ZAGS stamp, seal, surnames after marriage) | "Draw the 1945 marriage certificate" |
@@ -87,7 +89,7 @@ pip3 install openpyxl
    - Claude Code: `.claude/skills/` inside your project folder (create it if it doesn't exist).
    - Codex: `~/.codex/skills/`.
 
-   Copy the skill folders themselves, not the whole `genealogy-skills` folder. genealogy-biography needs chronology-table — copy both.
+   Copy the skill folders themselves, not the whole `genealogy-skills` folder. genealogy-biography needs chronology-table, source-page and place-page — copy all four; source-page and place-page use the scripts of genealogy-biography.
 
 3. **Restart Claude Code.** Type `/` — the skills appear in the list. How to start each skill and what to ask is in its own README (links in the table above).
 

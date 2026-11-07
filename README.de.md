@@ -18,6 +18,8 @@ Jeder Skill ist ein Ordner mit einer `SKILL.md` (Anweisungen für den Agenten), 
 | [archidocs-form](archidocs-form/README.de.md) | Erstellt das Archidocs-Upload-Formular aus den von Ihnen geprüften Zeilen, mit modernen Vor- und Vatersnamen; gleicht frühere Teile mit Ihren späteren Korrekturen ab | „Erstelle das Archidocs-Formular für Teil 4“ |
 | [chronology-table](chronology-table/README.de.md) | Liest eine chronologische Tabelle (eine Zeile pro Lebensereignis, `.ods/.xlsx/.csv`) zu einer bereinigten Faktenliste mit Quellen, Kommentaren und Links | wird von genealogy-biography genutzt; oder „Prüfe die Tabelle zu Lapina“ |
 | [genealogy-biography](genealogy-biography/README.de.md) | Schreibt die Personenseite der Website: Lebensgeschichte mit wörtlichen Zitaten, eine Seite pro Quelle, Namensregister, Verknüpfung mit Orten; baut die Website und prüft die Links | „Schreibe eine Biografie von Jakow Pissarew“ |
+| [source-page](source-page/README.de.md) | Erstellt oder korrigiert eine Quellenseite: Jahr vorn im Titel, die Akte wie auf dem Umschlag oder im Archivverzeichnis benannt (in Bordeaux), Lage des Scans, wörtlicher Text mit Herkunftsvermerk, Vermutungen als solche gekennzeichnet; trägt sie in Register, Menü und Prüflisten ein | „Lege eine Quellenseite zur Volkszählung 1709, Dorf Borowowo, an“ |
+| [place-page](place-page/README.de.md) | Erstellt oder ordnet eine Dorfseite zeitlich: Kirchengemeinde nach Zeiträumen, Gliederung vor 1917 nach Zeiträumen, alle Erwähnungen in Dokumenten nach Jahren, Schlüsse des Verfassers mit Ankern | „Liste auf der Seite von Gorelik alle Erwähnungen nach Jahren auf“ |
 | [replica-birth-certificate-1936](replica-birth-certificate-1936/README.de.md) | Gesetzte Kopie (HTML/CSS nach dem Formular) einer Geburtsurkunde der späten 1930er (Standesamt beim NKWD), auch Zweitschriften nach Kirchenbuch; auf einer Dokumentseite mit wörtlicher Abschrift | „Zeichne die Geburtsurkunde der 1930er nach dem Formular nach“ |
 | [replica-birth-certificate-1940s](replica-birth-certificate-1940s/README.de.md) | Dasselbe für eine Geburtsurkunde der Kriegsjahre (etwa 1941–1946, gefaltetes Blatt mit Umschlag) | „Zeichne die Geburtsurkunde von 1944 nach“ |
 | [replica-marriage-certificate-1940s](replica-marriage-certificate-1940s/README.de.md) | Dasselbe für eine Heiratsurkunde der 1940er (Standesamtsstempel, Siegel, Namen nach der Ehe) | „Zeichne die Heiratsurkunde von 1945 nach“ |
@@ -89,7 +91,7 @@ pip3 install openpyxl
    - Claude Code: `.claude/skills/` in Ihrem Projektordner (anlegen, falls er fehlt).
    - Codex: `~/.codex/skills/`.
 
-   Kopieren Sie die Skill-Ordner selbst, nicht den ganzen Ordner `genealogy-skills`. genealogy-biography braucht chronology-table — kopieren Sie beide.
+   Kopieren Sie die Skill-Ordner selbst, nicht den ganzen Ordner `genealogy-skills`. genealogy-biography braucht chronology-table, source-page und place-page — kopieren Sie alle vier; source-page und place-page nutzen die Skripte von genealogy-biography.
 
 3. **Claude Code neu starten.** Geben Sie `/` ein — die Skills erscheinen in der Liste. Wie jeder Skill gestartet wird und worum man ihn bittet, steht in seinem eigenen README (Links in der Tabelle oben).
 

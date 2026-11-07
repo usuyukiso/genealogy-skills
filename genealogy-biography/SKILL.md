@@ -245,6 +245,10 @@ which records have no available text; OCR readings that need checking against th
 
 ## 4. Source pages (mandatory when any sources exist)
 
+The full rules for one source page (delo title in «…», labels, transcripts, guesses,
+maps, registration, corrections) are in the **source-page** skill — load it and follow it
+for every source page; the summary below stays for reference.
+
 **One page per distinct document**, shared by all biographies. If several rows cite the
 same record, cite the same ID. Before creating a page, search for it
 (`next_id.py find` by archive reference, scan URL, original code): if it exists, reuse
@@ -350,6 +354,20 @@ accessed: "<today, YYYY-MM-DD>"
   Опочецкого уезда, дд. Маковицы и Захарино», «1908 Метрическая книга Шкотовской церкви,
   ч. 1 (о родившихся), 4 декабря: …». A year span stays («1888–1890 Изба …»). The page
   heading is the same title followed by the ID in parentheses: `# <title> (A1010)`.
+- **Name the delo verbatim, in «…».** In «Полное описание», right after the archive
+  reference, give the delo's own title in guillemets — from the cover of the delo or,
+  if the cover has none, from the archive inventory (опись), saying which («название на
+  обложке дела», «по архивной описи фонда»). The hook `hooks/delo_title.py` colours a
+  «…» title that follows «д. N» in bordeaux (class `.delo-title`); if the title stands
+  further away, wrap it yourself: `<span class="delo-title">«…»</span>` (inline
+  `[…]{.class}` does not work on plain text). Never put your own paraphrase in «…» —
+  without a real title, describe the delo in plain words, uncoloured. If a delo holds
+  several books, name the one the cited leaves belong to (e.g. д. 8505: лл. 1–240 vs
+  257–417).
+- **Label every guess.** Background from general knowledge (what a census was for, an
+  epidemic year) and readings of a formula («двор пуст» = nobody lived there) are not
+  in the document: give a source or mark them «по мнению составителя», «по-видимому»,
+  «вероятно». State only what the entries themselves show.
 - **Decode archive codes** into a readable citation using `references/terms.md`, and keep
   the original code as the file name in the author's library, with its extension:
   «В личной библиотеке автора сайта документ хранится как файл `<code>.<ext>`.» Never
@@ -467,7 +485,9 @@ approximate range; no year → label without it). Keep the «Персоны» en
 order as the table in `docs/people/index.md`: by birth year, then the people without a
 year alphabetically.
 
-**Places.** Settlements have pages `docs/places/PLC1000-<slug>.md` (list them with
+**Places.** The structure of a place page (parish first, division by period, mentions
+by year, anchored conclusions, index and menu) is in the **place-page** skill — load it
+when you create or change a place page. Settlements have pages `docs/places/PLC1000-<slug>.md` (list them with
 `next_id.py list`). When the person lived in, was born in or was otherwise connected to a
 settlement that has a page:
 - add its ID to the person's front matter `places: [PLC1000]` and link the first mention
