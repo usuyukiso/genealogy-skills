@@ -16,7 +16,7 @@ Der Skill wurde für eine russischsprachige [MkDocs-Material](https://squidfunk.
 - **Hilfsskript für Yandex Archive.** `scripts/yandex_archive.py` holt den erkannten Text und die Archivsignatur eines Scans und durchsucht das Archiv. Der erkannte Text gilt als Entwurf: Er wird mit dem Scan abgeglichen, Korrekturen werden sichtbar gemacht.
 - **Feste Kennungen.** Jede Seite hat eine dauerhafte ID (`P1000` Person, `A1000` Archiveintrag, `B` Buch, `F` Foto, `W` Webseite, `PLC` Ort…). `scripts/next_id.py` liefert die nächste freie ID und prüft, ob ein Dokument bereits eine Seite hat, damit nichts doppelt angelegt wird.
 - **Namensregister.** Jede Person, die in einem Eintrag genannt wird — Verwandte, Paten, Trauzeugen, Nachbarn, Priester —, erhält eine Zeile im gemeinsamen Register; Frauen unter jedem bekannten Nachnamen.
-- **Orte.** Personen werden mit Ortsseiten verknüpft; die Verwaltungsgliederung vor 1917 wird nach Dokumenten mit dem Jahr der Quelle angegeben.
+- **Orte.** Personen werden mit Ortsseiten verknüpft. Eine Ortsseite beginnt mit der Kirchengemeinde nach Zeiträumen, dann folgen die Verwaltungsgliederung vor 1917 nach Zeiträumen (z. B. die „Guba“ des 18. Jahrhunderts, dann Kreis und Wolost) und eine Tabelle aller Erwähnungen des Ortes in Dokumenten nach Jahren, damit Namenswechsel und widersprüchliche Angaben sichtbar werden.
 - **Strenger Build.** Am Ende wird die Website im strikten Modus gebaut: Ein defekter Link oder eine unbekannte ID stoppt die Arbeit, bis der Fehler behoben ist.
 
 ## Welche Regeln er befolgt

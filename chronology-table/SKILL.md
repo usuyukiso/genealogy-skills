@@ -1,6 +1,6 @@
 ---
 name: chronology-table
-description: Read a genealogical chronology spreadsheet (.ods, .xlsx, .csv) where each row is a dated life event of one person — births, marriages, deaths, censuses, confession lists, baptisms as godparent, moves, status changes — and turn it into a clean list of facts with their sources (cell comments, hyperlinks, archive codes, Yandex Archive links). Use whenever a task takes such a table as input: writing or updating a biography from it, checking it, extracting relatives or sources, or when the user points at a spreadsheet of events about a person.
+description: Read a genealogical chronology spreadsheet (.ods, .xlsx, .csv) where each row is a dated life event of one person — births, marriages, deaths, censuses, confession lists, baptisms as godparent, moves, status changes — and turn it into a clean list of facts with their sources (cell comments, hyperlinks, archive codes, Yandex Archive links). Use whenever a task takes such a table as input — writing or updating a biography from it, checking it, extracting relatives or sources, or when the user points at a spreadsheet of events about a person.
 ---
 
 # Reading a chronology table

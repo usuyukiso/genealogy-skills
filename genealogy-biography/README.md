@@ -16,7 +16,7 @@ The skill is built for a Russian-language [MkDocs Material](https://squidfunk.gi
 - **Yandex Archive helper.** `scripts/yandex_archive.py` pulls the recognized text and the catalog reference of a scan from Yandex Archive and searches the archive. OCR text is treated as a draft: it is checked against the scan and corrections are shown.
 - **Stable IDs.** Every page has a permanent ID (`P1000` person, `A1000` archive record, `B` book, `F` photo, `W` web page, `PLC` place…). `scripts/next_id.py` finds the next free ID and checks whether a document already has a page, so nothing is duplicated.
 - **People index.** Everyone named in a record about the person — relatives, godparents, witnesses, neighbours, priests — gets a line in the shared name index, women under every known surname.
-- **Places.** People are linked to settlement pages; the pre-1917 administrative division is quoted from documents with the year of the source.
+- **Places.** People are linked to settlement pages. Each place page starts with the church parish by period, then the pre-1917 administrative division split by period (e.g. 18th-century губа, then uyezd and volost), and a table of every mention of the place in documents by year, so that name changes and conflicting divisions are visible.
 - **Strict build.** The site is built in strict mode at the end, so a broken link or an unknown ID stops the work until it is fixed.
 
 ## Research rules it follows

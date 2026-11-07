@@ -479,6 +479,23 @@ settlement that has a page:
 - documentary mentions of the place's administrative division go under «До революции
   1917 года» / «После революции 1917 года», quoted with sources. The official pre-1917
   division is written by the user — never fill or overwrite it yourself.
+- **«Церковный приход» comes first**, as its own `## Церковный приход` section right
+  after the intro paragraph, before «Административное деление» (user, 2026-11-07: «это
+  важный блок»). It is a table `| Годы | Церковь | Как известно | Источник |` listing
+  **every** known mention of the parish by period — which church the villagers confessed,
+  married, were baptised in — with sources; facts from the compiler's notes are marked
+  «по заметкам составителя» with no ID. Mirror it in `parish_before_1917:` in the front
+  matter (`"1754–1774: Георгиевская церковь пригорода Воронича"`). Whenever a new record
+  names a parish, add a row. Example: PLC1015 (Горелик).
+- **Split «До революции 1917 года» by period** with `####` headings carrying the years,
+  newest first, e.g. «Конец XVIII века – 1917 год: Опочецкий уезд» (uyezd, volost, stan,
+  «Списки населённых мест») and «1709 – 1770-е годы: Ильинская губа Вороницкой
+  дворцовой вотчины» (губа/засада/вотчина of the 18th century). After them —
+  `#### Упоминания в документах по годам {#upominaniya}`: a table `| Год | Как записано в
+  документе | Губа (or other division) | Источник |`, one row per document, quoting how
+  the place is named, so that name changes and conflicting divisions are visible. A
+  compiler's conclusion about the place (e.g. an old name) gets its own `####` heading
+  with an anchor, so source pages can link to it («Читать доказательства — на странице …»).
 A Familio settlement card gets **no** `W` source page: link it directly on the place page
 («[карточка деревни на сайте Familio](https://familio.org/settlements/…)»).
 A new place page is created only when the user asks; add it to `nav:` under «Места»

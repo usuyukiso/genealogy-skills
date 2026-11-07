@@ -1,6 +1,6 @@
 ---
 name: replica-marriage-certificate-1940s
-description: Make a typed replica (HTML/CSS copy laid out like the blank form, not a scan) of a Soviet marriage certificate on the NKVD USSR ZAGS form of the 1940s («Свидетельство о браке», landscape sheet: on the left the ZAGS office stamp, place and date of issue, on the right the fields «Гр. … и гр. …, вступили в брак …», surnames after marriage) and publish it as a document page (D-ID) of the family-history MkDocs site, with a verbatim transcript, reading notes and a footer naming this skill. Use when the user asks to draw / отрисовать / сделать копию бланка of a 1940s marriage certificate («свидетельство о браке 1940-х»). Other forms have their own replica-* skills.
+description: Make a typed replica (HTML/CSS copy laid out like the blank form, not a scan) of a Soviet marriage certificate on the NKVD USSR ZAGS form of the 1940s («Свидетельство о браке», landscape sheet — on the left the ZAGS office stamp, place and date of issue, on the right the fields «Гр. … и гр. …, вступили в брак …», surnames after marriage) and publish it as a document page (D-ID) of the family-history MkDocs site, with a verbatim transcript, reading notes and a footer naming this skill. Use when the user asks to draw / отрисовать / сделать копию бланка of a 1940s marriage certificate («свидетельство о браке 1940-х»). Other forms have their own replica-* skills.
 ---
 
 # Replica: marriage certificate, NKVD ZAGS form of the 1940s
