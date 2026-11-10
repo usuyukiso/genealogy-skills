@@ -46,6 +46,9 @@ swiftc -O .claude/skills/metric-book-index/scripts/crop.swift -o /tmp/scan_crop 
   writing it down. Words lost in the gutter stay `[…]`: never guess them into a target
   surname (e.g. «Егор […]симов» stays as is — not «Анисимов»).
 - `sips -c` ignores the crop offset on some files — use `crop.swift`.
+- An enhanced copy (contrast, enlarged crop) that settled a reading is kept in the folder
+  of the original scans as `<original file name>_der.<Village>_enhanced.jpg` (e.g.
+  `2026-04-09 16-39-44_der.Boravovo_enhanced.jpg`) — the rule is in the source-page skill, § 1.
 
 ## 2. Index format
 

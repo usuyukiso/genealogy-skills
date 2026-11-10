@@ -177,6 +177,10 @@ the cause and age as written), marriages, godparenthood, censuses, and confessio
   "Text origin label" in step 4). The general explanation of these labels and of the
   marks [?], […], [неразборчиво], [в распознании: «…»] lives once in the section
   «Откуда взяты цитаты» of docs/sources/index.md; don't repeat it on person pages.
+- **Ellipsis never alone on a line** (user, 2026-11-08; same rule in source-page): a «…»
+  at the end of a cut quote is glued to the last word, no space («…Пестова…»); where the
+  space must stay (a placeholder for an omitted word, «Деревня …»), use a non-breaking
+  space `&nbsp;…`.
 
 **Cite inline.** After each claim, add the source ID in brackets:
 `...родились близнецы Иван и Мария [A1000].` Several in a row: `[B1000][A1005]`. Every ID
@@ -484,6 +488,16 @@ their name or dates are corrected (keep this technical note out of the site page
 approximate range; no year → label without it). Keep the «Персоны» entries in the same
 order as the table in `docs/people/index.md`: by birth year, then the people without a
 year alphabetically.
+**No birth year but the page gives an estimate** («не позже 1630-х гг.» from a son's age):
+no year in the label — «Меркулей Павлов» (not «17 век», not «до 1640»: no exact data);
+«—» in the year column of people/index.md, no year on the home page; but put the entry
+in its place by the estimate and set `sort_year: 1640` in front matter so the menu and
+the tree keep that place (user, 2026-11-10; P1120, P1117). Without `sort_year` the hook
+uses the eldest child's year minus 20.
+**`tree_branch`** on every root of the tree (person without parents on the site), or the
+root lands in the tab «Другие»: the Vinnik family → «Харьковская ветка». A spouse whose
+origin is not known gets `tree_branch: "Неустановленное происхождение"` (Егор Почеревин,
+P1001): the hook shows him as a root in that tab too, besides next to his wife.
 
 **Places.** The structure of a place page (parish first, division by period, mentions
 by year, anchored conclusions, index and menu) is in the **place-page** skill — load it
@@ -515,7 +529,7 @@ settlement that has a page:
   документе | Губа (or other division) | Источник |`, one row per document, quoting how
   the place is named, so that name changes and conflicting divisions are visible. A
   compiler's conclusion about the place (e.g. an old name) gets its own `####` heading
-  with an anchor, so source pages can link to it («Читать доказательства — на странице …»).
+  with an anchor, so source pages can link to it («Доводы составителя — на странице …»).
 A Familio settlement card gets **no** `W` source page: link it directly on the place page
 («[карточка деревни на сайте Familio](https://familio.org/settlements/…)»).
 A new place page is created only when the user asks; add it to `nav:` under «Места»

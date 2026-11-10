@@ -18,7 +18,7 @@ Oder direkt: `/source-page <was>`.
 
 ## Was herauskommt
 
-- Eine Seite `docs/sources/…/<ID>-<slug>.md`: Titel mit dem Jahr vorn, vollständige Angabe mit dem Titel der Akte, Lage des Scans (Ordner, Datei, Seite), Text „auf Papier“, Erläuterungen zur Lesung.
+- Eine Seite `docs/sources/…/<ID>-<slug>.md`: Titel mit dem Jahr vorn, vollständige Angabe mit dem Titel der Akte, Lage des Scans (Ordner, Datei, Seite), Text „auf Papier“, Erläuterungen zur Lesung; bei Volkszählungen und Revisionen des 18. Jahrhunderts eine Vergleichstabelle mit den anderen Dokumenten desselben Hofes (Alter nach Jahren, Geburtsjahr, wer fehlt, Schluss des Verfassers).
 - Die Seite ist im Quellenregister, im Menü, in der internen Prüfliste und im Protokoll der gesichteten Akten eingetragen; die Website ist im strengen Modus gebaut.
 
 ## Was es braucht

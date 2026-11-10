@@ -19,6 +19,7 @@ Or start it directly: `/place-page <village>`.
 ## What you get
 
 - A page `docs/places/PLC…-<slug>.md` in a fixed order: first paragraph, church parish, division before 1917 by period, mentions by year, conclusions, after 1917, people, sources.
+- A check of neighbouring villages: the order of entries in censuses compared with the «Списки населённых мест» 1872–77 and the 1786 map — helps to identify an unread or renamed village.
 - The places index and the menu kept in sync; the site built in strict mode.
 
 ## What it needs

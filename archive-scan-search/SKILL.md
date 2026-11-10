@@ -93,6 +93,9 @@ swiftc -O $SK/crop.swift -o /tmp/scan_crop     # once
 - Read the image, not the OCR line. Note frame file names for every fact (they become the
   source reference later: folder + `IMG_xxxx`).
 - Uncertain readings: «?» in the text, never silently normalised.
+- An enhanced copy (contrast, enlarged crop) that settled a reading is kept in the folder
+  of the original scans as `<original file name>_der.<Village>_enhanced.jpg` (e.g.
+  `2026-04-09 16-39-44_der.Boravovo_enhanced.jpg`) — the rule is in the source-page skill, § 1.
 - Record what the delo is: year, the товарищество/общество and size, seller, land
   location (volost, «при сельцѣ/дер./имѣніи …»), buyers' villages, whether there is a
   name list.

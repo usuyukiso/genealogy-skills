@@ -19,6 +19,7 @@ Oder direkt: `/place-page <Dorf>`.
 ## Was herauskommt
 
 - Eine Seite `docs/places/PLC…-<slug>.md` in fester Reihenfolge: erster Absatz, Kirchengemeinde, Gliederung vor 1917 nach Zeiträumen, Erwähnungen nach Jahren, Schlüsse, nach 1917, Personen, Quellen.
+- Ein Abgleich der Nachbardörfer: die Reihenfolge der Einträge in den Zählungen wird mit den «Списки населённых мест» 1872–77 und der Karte von 1786 verglichen — hilft, ein unlesbares oder umbenanntes Dorf zu erkennen.
 - Ortsverzeichnis und Menü abgeglichen; Website im strengen Modus gebaut.
 
 ## Was es braucht

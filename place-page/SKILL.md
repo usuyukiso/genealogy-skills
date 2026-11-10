@@ -60,7 +60,7 @@ sources: [A1292, M1000, A1275, …]
 5. **Conclusions of the compiler** — each under its own `####` heading with an anchor,
    e.g. `#### Горелик и Пентехово (вывод составителя) {#gorelik-pentekhovo}`, stating the
    evidence (documents, map) and labelled as the compiler's view («составитель считает…»,
-   «возможно…»). Source pages link to the anchor: «Читать доказательства — на странице
+   «возможно…»). Source pages link to the anchor: «Доводы составителя — на странице
    Горелика».
 6. **`### После революции 1917 года`** — later divisions, modern district; a Familio card
    is linked directly («[карточка Familio](https://familio.org/settlements/…)»), with no
@@ -77,6 +77,18 @@ sources: [A1292, M1000, A1275, …]
   readings of a map, background knowledge — «по мнению составителя», «по-видимому», or a
   source. Disputed points also go to `research_open_questions.md`; they are not put into
   «Генеалогические загадки» unless the user asks.
+- **Check the neighbours — do it yourself, don't leave it to the user.** Scribes walked
+  village by village, so the order of entries is evidence. When a village is unread,
+  doubtful, renamed or has a double («Шесниково, Печохново тож», a second «Печохново,
+  Шевырево тож»), compare its neighbours in the book with its neighbours in the
+  «Списки населённых мест» 1872–77 [B1011] (numbers go along a river or road), on the
+  1786 map [M1000] and in the other censuses (1709, 1711, 1719, 1745, 1763). Same
+  neighbours in different years → same place. Example: in 1719 an entry read as «Лесково
+  [?]» stood between Гузарево and Шемелево; in 1872–77 Печехново is № 7146 between
+  Гузарево (7145) and Щемелево (7147) — the entry was Печохново (A1294). Write the
+  result as a short sentence with the numbers and sources («В 1872–77 гг. … тоже стоит
+  рядом с Гузаревым (№ 7145, 7146) [B1011]»), marked as the compiler's conclusion if it
+  identifies the place.
 - **Quote names as written** in the documents (old spelling in quotes); the page's own
   text uses the modern name.
 - When a source page is created about this place, add it to the mentions table, to

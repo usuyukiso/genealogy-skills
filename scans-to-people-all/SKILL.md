@@ -35,6 +35,9 @@ description: Transcribe scans of a confession list (исповедная рос�
 - View the whole page first, then crop zoomed strips with `sips` into the scratchpad
   (`sips -c H W --cropOffset Y X src --out strip.jpg; sips -Z 1600 strip.jpg`): ~4–7 strips of the
   names + ages columns, then tighter crops for every doubtful word.
+- An enhanced copy (contrast, enlarged crop) that settled a reading is kept in the folder of the
+  original scans as `<original file name>_der.<Village>_enhanced.jpg` (e.g.
+  `2026-04-09 16-39-44_der.Boravovo_enhanced.jpg`) — the rule is in the source-page skill, § 1.
 - **Align ages by the running numbers, not by the line.** The clerk often writes ages one row
   below the name. The columns «мужеска/женска пола» carry sequential numbers per sex; walk the
   names in order, assign each a sex, and match against the sequence of male/female ages. Crossed-out

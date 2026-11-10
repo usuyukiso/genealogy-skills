@@ -23,10 +23,58 @@ without an ID (`../../genealogy-puzzles.md`) or a section anchor
   have been looked at; afterwards log this review there too (including negative results).
 - Read the scan yourself (or the user's own transcription) — never quote machine OCR of a
   whole collection; read the passage on the scan.
+- **Enhanced copies of a scan** (contrast, background levelling, enlarged crop — anything
+  made to read it better) that helped a reading are kept, not left in the scratchpad:
+  save them **in the same folder as the original scans**, named as the original file
+  (without extension) + `_der.<Village>` + `_enhanced`, e.g.
+  `2026-04-09 16-39-44_der.Boravovo_enhanced.jpg`. `<Village>` is the village in Latin
+  letters (as in the page slug / the user's file names). Several copies of one frame get a
+  tail after `enhanced`: `…_enhanced_lines3-4_left.jpg`, `…_enhanced_2.jpg`. No separate
+  `_enhanced_*` folders and no names by frame number (`638_R_…`). Never overwrite or
+  rename the original. On the page and in the notes cite such a file as «рабочая копия,
+  не источник», next to the original file name: name only the main copy
+  (`2026-03-16 15-55-17_cc2_der.Boravovo_enhanced.jpg`) — no list of the crops, no `*`
+  mask, no file count; the crops lie next to it under the same name with a tail. Throw-away trial crops stay in
+  the scratchpad.
 - Find the **delo's own title**: on its cover (photograph of the cover/first frames) or,
   if the cover has none, in the archive inventory (e.g. `sources/opisi/1209-opis_1-2.pdf`;
   `pypdf` in a scratch venv extracts the text). A delo may hold several books with
   different titles by leaf ranges — take the book the cited leaves belong to.
+
+## 1a. One delo, several villages: a general delo page
+
+When the site has records of **more than one village from the same delo** (a census, a
+revision, a confession-list delo), make one page per village **plus one general page of the
+delo** (user, 2026-11-08). Model: [A1296] (1709, РГАДА ф. 1209, оп. 1, д. 8505) with the
+village pages A1291, A1292, A1293, A1295.
+
+- **General page** (`A…-<archive>-<fond>-<opis>-<delo>-<year>-delo.md`, title «<year>
+  <archive ref>: <what the books are> (описание дела)»). Everything that does not belong to
+  one village goes here:
+  - the delo's own title(s) verbatim in «…» (bordeaux span): every book of the delo with its
+    leaf range, from the cover or the archive inventory;
+  - who made it, when; what the cover says;
+  - how the book is arranged (chain of headings uyezd → губа → owner → village, quoted with
+    leaf and scan file; how entries follow each other; totals);
+  - formulas met in many entries («лѣтны», «дворъ впусте», «тому N лет», «708 году»);
+  - where the scans lie (folders, leaf ranges, files of the headings);
+  - **a table of the site's villages in this delo** — `| Деревня на сайте: как записана в книге |
+    Губа, владелец | Лист | Файл | Страница записи |` (one cell: «[Порухово](PLC1011): «Деревня
+    Порухово, на речки Порховки»», for compactness), each village linked to its PLC page,
+    the village page by ID or «пока нет». Then «Не найдены» (searched, absent) and «Не
+    искали».
+- **Which villages go into the table:**
+  - **revisions and censuses before 1800 — all villages of the site** (every PLC page of
+    the guberniya), each with what was found, not found or not searched; obligatory;
+  - **after 1800** — in detail all villages of our volost / губа found in the delo (there
+    are not many), if the compiler has the information; otherwise only our villages for now.
+- **Village pages** keep only their record: «Полное описание» with archive, fond, opis,
+  delo, leaf, the book named in plain words (no long title in «…»), the section heading
+  of the губа, and a line «Полное название книги по описи, устройство записей, сканы и все
+  деревни сайта в этом деле — на общей странице дела [A…]»; the scan file of the record;
+  the record, residents, reading notes about this record, neighbours, comparison.
+- Old deloes are converted when the user edits them (done: 1709 д. 8505; 1719 and others —
+  later, on request).
 
 ## 2. Page skeleton
 
@@ -70,6 +118,25 @@ of the delo / which village / which household>.
 - The citation must stand on its own: name archive, fond, delo, book fully; «то же дело,
   что [A…]» only as an extra.
 
+## 2a. Shortening long titles (menu, page title, «Полное описание»)
+
+Long delo or book titles list many uyezds, prigorods, gubas. Shorten them so that **our
+place stays visible** — we look for it first (user, 2026-11-08: «нас же интересует
+Вороничский»):
+
+- **Page title and menu**: name the first place of the original and ours, then «и др.»:
+  «переписные книги Псковского, Воронецкого и др. уездов»; on a village page, our
+  section: «переписная книга дворцовых крестьян, Ильинская губа Вороницкого уезда, д. …».
+  Never a title that names only other places (that reads as a mismatch with the village).
+- **Quoted title in «…»** (bordeaux): keep the original words, cut the rest with «…»,
+  keep our place: «Переписная книга дворцовых крестьян Псковского уезда и Псковских
+  пригородов в уездах: … Воронецком … переписи стольника Кирилла Абрамовича Пестова …».
+  The full title stays on the general delo page (§ 1a). Never retell in «…».
+
+- **Town names in page title / menu: modern form** (user, 2026-11-09): «Опочки, Воронича и
+  Велья», not «Вороноча»; the document's form («г. Вороноча») stays in «Полное описание»
+  and quotes.
+
 ## 3. The delo title — verbatim, in «…», bordeaux
 
 In «Полное описание», right after the reference, give the delo's title **verbatim in
@@ -92,6 +159,11 @@ real title, describe the delo in plain words, uncoloured. Facts read on the cove
   pages); tables too: `> | … |`.
 - **Original spelling** (ъ ѣ і ѳ, old endings) in readings of pre-1918 scans; modern
   spelling only in the page's own prose.
+- **Ellipsis never alone on a line** (user, 2026-11-08; same rule in genealogy-biography):
+  a «…» at the end of a cut quote is glued to the last word, no space — «…переписи
+  стольника Кирилла Абрамовича Пестова…»; where the space must stay (a placeholder for an
+  omitted word, «Деревня …»), use a non-breaking space `&nbsp;…`. Same for any short
+  piece that must not wrap away from its word.
 - **Brackets**: `[?]` for a doubtful word, `[…]` for an illegible place, `[л. 380:]` for a
   page break inside a quote. Ordinary words under a titlo are written out without brackets
   («два сына», «сынъ»); a real contraction keeps the restored letters in brackets
@@ -121,11 +193,52 @@ real title, describe the delo in plain words, uncoloured. Facts read on the cove
   depends on which record is right — either give a source or mark «по мнению составителя»,
   «по-видимому», «вероятно», «предположение составителя (не подтверждено)». Don't name an
   unverified identification as fact in titles or tables.
-- Comparison with other records (e.g. 1709 vs 1719): a table plus notes; when ages
-  disagree, say both and that it is not settled; a later age copied as «previous + N
-  years» does not confirm the earlier one.
+- **«Сравнение с другими документами» — required for censuses, revisions and confession
+  lists of the 18th century** (model: A1294, Печохново 1719). These records give only names
+  and ages, so identity rests on the comparison. Build it like this:
+  - a table: one column per document (1709 / 1719 / 1745 …, each with its [ID]), one row per
+    person of the household, cells quote the age or the words as written («голова Григорий
+    Егоров», 51; «брат родной…»), last column «→ год рождения» (several years if the records
+    disagree, e.g. «ок. 1699 (1709) / ок. 1694 (1719, 1745)»); a dash where the person is
+    absent;
+  - notes under the table: which ages agree and by how much; a later age that is exactly
+    «previous + N years» repeats the earlier record and does not confirm it; who is missing
+    from a household and should be there (a son 15 years old in 1719 not written in); a
+    namesake in the same book and why he is not ours;
+  - the conclusion in one sentence, marked as the compiler's: «Поэтому … — это [Имя](P…).
+    Это вывод составителя по именам, отчествам, деревне и возрасту.»
+  - **1709, 1711 and 1719 (user, 2026-11-09; only these three years):** every village page
+    of these three documents carries the same comparison table with all three columns
+    (1709 / 1711 / 1719, each with its [ID]), every person of the village in any of them as
+    a row, cells quoted as written; a dash = absent (for a partly read record say «в
+    прочитанном нет»). Notes may differ per page.
+    **Exception (user, 2026-11-10):** if in one of the three records our people are not
+    found — the entry is not read / not recognised (faded text) — that record gets **no
+    column**: there is nothing to put in it. The pages of the other years take the nearest
+    readable document instead (e.g. 1745) and end the section with one paragraph:
+    «**Перепись 1711 г.** Запись деревни есть — [A…], но текст выцвел и прочитан не
+    полностью; сравнение с 1711 г. пока не сделано.» The page of the unread record itself
+    has no comparison table, only links to the other years. Model: Печохново — A1293
+    (1709), A1294 (1719 / 1709 / 1745), A1302 (1711, no table). Adding it to a `verified:` page → remove
+    `verified:`, uncheck. Model: Боровово — A1291, A1307, A1308.
+- **Neighbouring entries as evidence** (censuses, revisions): in the full citation say
+  which village comes before and after ours, and check them against the «Списки населённых
+  мест» 1872–77 [B1011] order, the 1786 map [M1000] and other years' books. If the same
+  neighbours recur, say so in one sentence with numbers («В 1872–77 гг. Печехново … тоже
+  стоит рядом с Гузаревым (№ 7145, 7146) [B1011]»). The compiler finds this hard to see —
+  always do it, don't wait to be asked. Details — place-page skill, «Check the neighbours».
+- **Patronymics added by the compiler** in a residents table: write each added patronymic
+  in *italics* (`Федор *Меркульев*`); a patronymic written in the document stays plain
+  (also when the document gives it as «Самсоновы дѣти» — say so in one clause). Right
+  under the table (not above it), always the same words: «Отчества, выделенные курсивом,
+  в оригинале не записаны: в вышеуказанном списке жителей они добавлены составителем по
+  имени отца.» (one added — «Отчество, выделенное курсивом, … оно добавлено …»). Don't
+  list the patronymics in the note instead of italics (user, 2026-11-10; model A1295).
+- **No history of the reading on the page**: don't write how a word was read before
+  («в черновом просмотре было прочитано как …»); corrections go to the check list only.
 - A compiler's conclusion about the place lives on the place page under its own heading
-  with an anchor; link to it («Читать доказательства — на странице …»).
+  with an anchor; link to it («Доводы составителя — на странице …»; not «доказательства» — a
+  conclusion is not a proof).
 
 ## 6. Maps (`M`) and pictures
 

@@ -18,7 +18,7 @@ Or start it directly: `/source-page <what>`.
 
 ## What you get
 
-- A page `docs/sources/…/<ID>-<slug>.md` with a year-first title, a full citation with the delo's own title, the scan location (folder, file, page side), the transcript on «paper», reading notes.
+- A page `docs/sources/…/<ID>-<slug>.md` with a year-first title, a full citation with the delo's own title, the scan location (folder, file, page side), the transcript on «paper», reading notes; for 18th-century censuses and revisions — a comparison table with the other records of the same household (ages by year, birth year, who is missing, the compiler's conclusion).
 - The page registered in the sources index, the menu, the internal check list and the review log; the site built in strict mode.
 
 ## What it needs
