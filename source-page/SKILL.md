@@ -89,6 +89,7 @@ inventory: "1"
 record: "8505"
 page: "185 об."
 document_date: "1709"
+family_list: [PLC1015]        # only for family lists, see «Previous / next known year» below
 evidence_kind: "primary"      # primary | secondary | unknown
 related_people: []            # IDs; empty if the user wants no links to people yet
 accessed: "<today>"
@@ -117,6 +118,22 @@ of the delo / which village / which household>.
   «В личной библиотеке автора сайта документ хранится как файл `…`».
 - The citation must stand on its own: name archive, fond, delo, book fully; «то же дело,
   что [A…]» only as an extra.
+- **Previous / next known year** (`family_list:`). A page that gives the **list of families
+  of a village** — confession list (исповедная роспись), census / переписная книга, revision
+  tale (ревизская сказка), книга выбывших душ, похозяйственная книга — gets
+  `family_list: [PLC…]` with every village whose households it lists (two villages →
+  two IDs) — also when none of our people are there: it is the list of sources of the
+  village. Order: by year; within one year by the kind of document alphabetically
+  (Исповедная роспись before Ревизская сказка), then by ID. **Not** for metric books, maps, «Списки населённых мест», general delo pages
+  (A1296-style) or pages that only mention a village in passing (a bride «из деревни X»).
+  A guba-wide page (A1274) lists a village only if that village has no own page for that
+  year. The hook `hooks/family_list_nav.py` then puts a card «← Предыдущий известный год /
+  → Следующий известный год» (year · kind of document · ID, badge «Источник») above
+  «## Связанные персоны» and recomputes it on every build, so a new in-between year
+  updates its neighbours by itself — just set `family_list:` on the new page. Never
+  write this block by hand. The kind is taken from the title (исповед → «Исповедная
+  роспись», перепис → «Переписная книга», сказк/ревиз → «Ревизская сказка», похоз,
+  выбывш; «(II ревизия)» is appended), so keep these words in the title.
 
 ## 2a. Shortening long titles (menu, page title, «Полное описание»)
 
