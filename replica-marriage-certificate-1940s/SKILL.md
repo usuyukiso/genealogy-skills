@@ -62,7 +62,7 @@ Follow the shared steps below; the form-specific part is above.
    - The sentence «Ниже — не скан, а копия, набранная по образцу бланка: …», saying what
      is not reproduced (signatures, coat of arms) and how seals are shown.
    - The replica HTML (copy the block from the example page and refill it).
-   - The label line on its own, only the term from «Откуда взяты цитаты» in bold:
+   - The label line on its own, only the term from «Как подготовлены тексты источников» in bold:
      `Текст свидетельства (**прочтение скана**; вписанное от руки выделено курсивом,
      неразборчивое отмечено «[…]»):`
    - The transcript as a quote: printed text plain, everything handwritten in `*italic*`.

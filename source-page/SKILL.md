@@ -168,7 +168,7 @@ real title, describe the delo in plain words, uncoloured. Facts read on the cove
 ## 4. Text and transcripts
 
 - **Label every block** of quoted text on its own line, bold only the term from
-  «Откуда взяты цитаты» (docs/sources/index.md): `Текст записи (**прочтение скана**):`,
+  «Как подготовлены тексты источников» (docs/sources/index.md): `Текст записи (**прочтение скана**):`,
   `Текст (**расшифровка составителя**):`, `Текст записи (**распознавание Яндекс Архива**):`,
   `**Текст недоступен:**`. After the user has checked it against the scan:
   `(**прочтение скана**, сверено составителем со сканом 2026-11-07; орфография оригинала)`.
@@ -268,8 +268,9 @@ real title, describe the delo in plain words, uncoloured. Facts read on the cove
 
 ## 7. Register and check
 
-1. `docs/sources/index.md`: row `| [A1292] | Архивная запись | <title> |`, sorted by year,
-   then by ID.
+1. `docs/sources/index.md`: row `| [A1292] | Архивная запись | <title> |`, in the table of
+   its century (`### XVIII век` … `### XXI век`, 1800 → XIX, 1900 → XX, 2000 → XX; undated →
+   `### Без года`), sorted by year, then by ID.
 2. `mkdocs.yml` → `nav:` under the matching group, same order.
 3. `internal/checks/documents_check_list.md`: `- [ ] A1292 — <title> — создано <date>
    (<scan files, what is uncertain>)`; update the counters «Всего» and the section count.

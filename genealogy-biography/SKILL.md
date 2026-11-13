@@ -176,7 +176,7 @@ the cause and age as written), marriages, godparenthood, censuses, and confessio
 - Where a quote comes from is stated on its **source page**, not in the biography (see
   "Text origin label" in step 4). The general explanation of these labels and of the
   marks [?], […], [неразборчиво], [в распознании: «…»] lives once in the section
-  «Откуда взяты цитаты» of docs/sources/index.md; don't repeat it on person pages.
+  «Как подготовлены тексты источников» of docs/sources/index.md; don't repeat it on person pages.
 - **Ellipsis never alone on a line** (user, 2026-11-08; same rule in source-page): a «…»
   at the end of a cut quote is glued to the last word, no space («…Пестова…»); where the
   space must stay (a placeholder for an omitted word, «Деревня …»), use a non-breaking
@@ -336,7 +336,7 @@ accessed: "<today, YYYY-MM-DD>"
 ```
 
 - **Text origin label.** The line before the quoted text always says where the text comes
-  from, using one of the labels explained in «Откуда взяты цитаты» (docs/sources/index.md):
+  from, using one of the labels explained in «Как подготовлены тексты источников» (docs/sources/index.md):
   `Текст записи (прочтение скана):` — read from the scan while making the page (add
   «орфография оригинала, сокращения не раскрыты; в квадратных скобках — пояснения и
   неуверенные прочтения» when useful); `Текст (расшифровка составителя):` — the user's own
@@ -346,8 +346,8 @@ accessed: "<today, YYYY-MM-DD>"
   scan, add «сверено со сканом <ГГГГ-ММ-ДД>». Machine OCR of a whole collection (e.g. the
   `_ocr/` folders of the Peasant Land Bank scans) is a search aid only: never quote it —
   read the passage on the scan and label it «прочтение скана». If you add a new kind of
-  label, add it to «Откуда взяты цитаты» too.
-  In the label only the term from «Откуда взяты цитаты» is **bold**, not the whole line:
+  label, add it to «Как подготовлены тексты источников» too.
+  In the label only the term from «Как подготовлены тексты источников» is **bold**, not the whole line:
   `Текст записи (**прочтение скана**):`, `Текст (**расшифровка составителя**):`,
   `Текст записи (**распознавание Яндекс Архива**):`, `**Текст недоступен:**`; other words
   in the brackets stay plain (`Текст свидетельства (**прочтение скана**; вписанное от руки
@@ -426,9 +426,10 @@ accessed: "<today, YYYY-MM-DD>"
   «Источники» section that sources are not given.
 
 **Register each new source** in two places:
-1. a row in the table in `docs/sources/index.md`: `| [A1010] | Архивная запись | <title> |`
-   (keep the table sorted by year of `document_date`, then by ID: A, B, DB, F, L, W, then
-   number; sources without a date go last);
+1. a row in `docs/sources/index.md`: `| [A1010] | Архивная запись | <title> |`, in the table
+   of its century (`### XVIII век` … `### XXI век`; 1800 → XIX, 1900 → XX, 2000 → XX; sources
+   without a date → `### Без года`), sorted by year of `document_date`, then by ID: A, B, DB,
+   F, L, W, then number;
 2. `nav:` in `mkdocs.yml`, under the matching group («Архивные записи», «Книги»;
    add a group for a new type), sorted the same way (year, then ID).
 
