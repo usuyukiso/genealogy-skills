@@ -210,6 +210,9 @@ death_date_status: unknown
 parents: [P1000]                # only IDs of people who have pages
 spouses: []
 children: []
+children_no_page:               # children WITHOUT a page, as in «Семья» (for the kin scheme)
+  - {name: "Мария", years: "1885 – 1885", sex: f}
+siblings_no_page: []            # only siblings not listed in a parent page's children_no_page
 sources: [A1000, A1005]
 ---
 
@@ -227,6 +230,11 @@ docs/sources/index.md, not on person pages.
 
 ## Семья
 <Spouses and children with dates, as a short list; link those who have pages.>
+<Every child named here without a page goes into `children_no_page` (name, years as on the page,
+sex m|f, optional note such as «возможно»), on BOTH parents' pages when both have pages, with
+identical strings — the site hook `person_kin.py` merges them and draws the scheme «Родители →
+братья и сёстры → дети» before «Источники». Siblings without pages go into `siblings_no_page`
+only when no parent page lists them. People born after 1950 are not listed.>
 
 ## Хронология
 | Дата | Событие | Место | Источник |
