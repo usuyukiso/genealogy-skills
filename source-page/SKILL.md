@@ -114,6 +114,17 @@ of the delo / which village / which household>.
 - **Title**: year first (`document_date`), then archive and reference, then what it is;
   neutral (the document, not the person's story). Exceptions: `W` and `DB` titles have no
   year in front. The H1 is the title plus ` (ID)`.
+- **Names in the title** (also H1, menu, sources index, check list): people of **our
+  family** — including daughters and sisters who married out — get 2–4-letter abbreviated
+  first names and patronymics, never bare initials: «брак Ив. Ег. Почеревина и Ан. Ник.
+  Сычевой», «Вал. Григ. Писарев» (not «Вал. Гр.»), «Мар. Анис. Мордвиновой». Take the
+  forms from the people index (`[Почеревин Ег. Дм.]`) so the same person is written the
+  same way everywhere. **Outsiders** (spouses from other families, friends, landowners,
+  authors) keep initials: «Ф. А. Рослого», «С. П. Кузьмина», «А. П. Чехова». A person with
+  **no surname** — name in full («Матроны, дочери Петра Давыдова»). The record gives no
+  patronymic — name in full without it («Егор Почеревин», not «Е. Почеревин»). A full
+  name already in the title («рождение Марии Почеревиной») is fine as is. Changing only
+  the name form in a title does not remove `verified:`.
 - **Archive codes** decoded into a readable citation; the original file code goes into
   «В личной библиотеке автора сайта документ хранится как файл `…`».
 - The citation must stand on its own: name archive, fond, delo, book fully; «то же дело,
